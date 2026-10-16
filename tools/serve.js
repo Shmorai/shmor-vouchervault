@@ -19,9 +19,9 @@ const ROUTES = {
     cols: r => [r.email, r.list, r.interests, r.store, r.placement, r.page, r.signedUpAt, 'yes'],
   },
   '/api/lead': {
-    file: 'leads.csv', head: 'email,phone,marketing_email,marketing_sms,store,offer,page,created_at',
-    ok: r => { const d = String(r.phone || '').replace(/\D/g, ''); return EMAIL.test(r.email || '') && d.length >= 7 && d.length <= 15 && r.termsAccepted === true; },
-    cols: r => [r.email, r.phone, r.marketingEmail ? 'yes' : 'no', r.marketingSms ? 'yes' : 'no', r.store, r.offer, r.page, r.createdAt],
+    file: 'leads.csv', head: 'first_name,last_name,email,phone,marketing_email,marketing_sms,store,offer,page,created_at',
+    ok: r => { const d = String(r.phone || '').replace(/\D/g, ''); return r.firstName && r.lastName && EMAIL.test(r.email || '') && d.length >= 7 && d.length <= 15 && r.termsAccepted === true; },
+    cols: r => [r.firstName, r.lastName, r.email, r.phone, r.marketingEmail ? 'yes' : 'no', r.marketingSms ? 'yes' : 'no', r.store, r.offer, r.page, r.createdAt],
   },
 };
 

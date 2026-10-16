@@ -154,7 +154,10 @@
     '<button type="button" class="vv-x" aria-label="Close">×</button><p class="vv-store"></p><h2 class="vv-title" id="vv-title"></h2>' +
     '<form class="vv-gate" novalidate action="" method="post">' +
       '<p class="vv-gate-lead"><b>Unlock this code.</b> Enter your details once and every code on VoucherVault unlocks on this device.</p>' +
+      '<div class="vv-names"><label class="vv-f"><span>First name</span><input type="text" name="first_name" id="vv-first" autocomplete="given-name" maxlength="60" required></label>' +
+      '<label class="vv-f"><span>Last name</span><input type="text" name="last_name" id="vv-last" autocomplete="family-name" maxlength="60" required></label></div>' +
       '<label class="vv-f"><span>Email address</span><input type="email" name="email" id="vv-email" autocomplete="email" placeholder="you@example.com" required></label>' +
+      '<input type="text" name="website" class="vv-hp" tabindex="-1" autocomplete="off" aria-hidden="true">' +
       '<label class="vv-f"><span>Mobile number</span><input type="tel" name="phone" id="vv-phone" autocomplete="tel" inputmode="tel" placeholder="+44 7700 900123" required></label>' +
       '<label class="vv-c"><input type="checkbox" name="terms" id="vv-terms" required><span>I agree to the <a href="https://shmor.ai/terms/" target="_blank" rel="noopener">Terms</a> and <a href="https://shmor.ai/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>' +
       '<label class="vv-c"><input type="checkbox" name="mkt_email" id="vv-mkt-email"><span>Email me new codes and offers ending soon (optional).</span></label>' +
@@ -201,11 +204,12 @@
     document.documentElement.style.overflow = 'hidden';
     if (history.replaceState) history.replaceState(null, '', '#' + card.id);
     if (unlocked()) showCode(card, btn);
-    else { modal.classList.add('is-gate'); $('.vv-err').hidden = true; getCodes(); setTimeout(function () { $('#vv-email').focus(); }, 30); }
+    else { modal.classList.add('is-gate'); $('.vv-err').hidden = true; getCodes(); setTimeout(function () { $('#vv-first').focus(); }, 30); }
   }
-  // Save the unlock details: provider (gate form action) -> private preview db ("leads") -> local preview server
+  // Save the unlock details: database (assets/db-config.js) -> provider (gate form action) -> private preview db ("leads") -> local preview server
   function saveLead(row) {
     var action = $('.vv-gate').getAttribute('action');
+    var viaDatabase = function () { return window.vvSaveRow ? window.vvSaveRow('leads', row) : Promise.reject(new Error('no database')); };
     var viaProvider = function () {
       if (!action) return Promise.reject(new Error('no provider'));
       var fd = new FormData(); Object.keys(row).forEach(function (k) { fd.append(k, row[k]); });
@@ -218,21 +222,25 @@
     var viaLocal = function () {
       return fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(row) }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); });
     };
-    return viaProvider().catch(viaDb).catch(viaLocal);
+    return viaDatabase().catch(viaProvider).catch(viaDb).catch(viaLocal);
   }
   modal.addEventListener('submit', function (e) {
     var form = e.target.closest('.vv-gate'); if (!form) return;
     e.preventDefault();
     var err = $('.vv-err'), say = function (t, el) { err.textContent = t; err.hidden = false; if (el) el.focus(); };
-    var email = $('#vv-email'), phone = $('#vv-phone'), terms = $('#vv-terms');
+    var first = $('#vv-first'), lastName = $('#vv-last'), email = $('#vv-email'), phone = $('#vv-phone'), terms = $('#vv-terms');
     var digits = phone.value.replace(/\D/g, '');
+    var nameOk = function (v) { v = v.trim(); return v.length >= 1 && v.length <= 60 && !/[<>{}\d@]/.test(v); };
+    if (!nameOk(first.value)) return say('Please enter your first name.', first);
+    if (!nameOk(lastName.value)) return say('Please enter your last name.', lastName);
     if (!email.value || !email.checkValidity()) return say('Please enter a valid email address.', email);
     if (!/^\+?[\d\s().-]+$/.test(phone.value.trim()) || digits.length < 7 || digits.length > 15) return say('Please enter a valid mobile number, including the country code if you’re outside the UK.', phone);
     if (!terms.checked) return say('Please agree to the Terms and Privacy Policy to unlock codes.', terms);
     err.hidden = true;
     var btn = form.querySelector('.vv-unlock'); btn.disabled = true; btn.textContent = 'Unlocking…';
     var c = current && current.card;
-    var row = { email: email.value.trim().toLowerCase(), phone: phone.value.trim(), termsAccepted: true,
+    if ($('.vv-hp').value) { store.set(UNLOCK, '1'); if (current) showCode(current.card, current.btn); return; } // bot trap: unlock but don't save
+    var row = { firstName: first.value.trim(), lastName: lastName.value.trim(), email: email.value.trim().toLowerCase(), phone: phone.value.trim(), termsAccepted: true,
       marketingEmail: $('#vv-mkt-email').checked, marketingSms: $('#vv-mkt-sms').checked,
       store: c ? c.getAttribute('data-store-id') : '', offer: c ? c.id.slice(2) : '', page: location.pathname, createdAt: new Date().toISOString() };
     saveLead(row).catch(function () { /* nothing could store it (no provider yet): still unlock, so codes never break */ })
@@ -316,7 +324,8 @@
     var row = { email: email.value.trim().toLowerCase(), consent: true, list: 'code-alerts', interests: interests.join(' '),
       store: store ? store.value : '', placement: form.getAttribute('data-placement') || '', page: location.pathname, signedUpAt: new Date().toISOString() };
     btn.disabled = true; say('Saving…');
-    viaPreviewDb(row).catch(function () { return viaLocalServer(row); }).then(function () {
+    (window.vvSaveRow ? window.vvSaveRow('signups', row) : Promise.reject(new Error('no database')))
+      .catch(function () { return viaPreviewDb(row); }).catch(function () { return viaLocalServer(row); }).then(function () {
       form.classList.add('is-done'); email.value = ''; consent.checked = false; done();
       say(row.store ? 'You’re in! We’ll email you new codes for this store.' : 'You’re in! Your first code alerts are on the way.');
     }).catch(function () { say('We couldn’t save that just now. Please try again in a moment.'); })

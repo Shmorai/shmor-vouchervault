@@ -17,7 +17,7 @@ const ROOT = path.resolve(__dirname, '..');
 const OUT = path.resolve(process.argv[2] || path.join(ROOT, '..', 'preview-vouchervault'));
 const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, '.build-manifest.json'), 'utf8'));
 const pages = manifest.filter(f => f.endsWith('.html'));
-const assets = ['assets/site.css', 'assets/site.js', 'assets/favicon.svg', 'assets/codes.json', 'search-index.json'];
+const assets = ['assets/site.css', 'assets/site.js', 'assets/favicon.svg', 'assets/codes.json', 'assets/db-config.js', 'search-index.json'];
 
 fs.rmSync(OUT, { recursive: true, force: true });
 const write = (rel, text) => { const f = path.join(OUT, rel); fs.mkdirSync(path.dirname(f), { recursive: true }); fs.writeFileSync(f, text); };
