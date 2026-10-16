@@ -1,0 +1,79 @@
+{
+  "generated": true,
+  "slug": "stores/adidas",
+  "title": "adidas Promo Codes & Discount Codes | VoucherVault",
+  "description": "3 live adidas offers, checked on adidas.com on 16 Oct 2026: 30% off for medical professionals, first responders, nurses, military & teachers.",
+  "nav": "adidas",
+  "h1": "adidas promo codes & offers",
+  "eyebrow": "Sportswear & trainers · US",
+  "intro": "adidas sells trainers, sportswear and kit worldwide. Its US site offers a sign-up discount through the free adiClub programme and a 30% discount for verified heroes and teachers.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "alt": "A red running trainer on a red background",
+    "credit": "Ryan Waring",
+    "creditUrl": "https://unsplash.com/@ryanwaring"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "adidas",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "adidas"
+      },
+      "tabs": true,
+      "title": "adidas codes & offers",
+      "intro": "Every offer below was checked on adidas.com. Tap a code to reveal and copy it."
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "store": "adidas"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a adidas promo code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.adidas.com/us\" rel=\"nofollow noopener\" target=\"_blank\">adidas.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at adidas",
+      "html": "<ul><li>Join adiClub (free) for the 15% sign-up code and free standard shipping.</li><li>The heroes discount is verified through ID.me and works online, in store and at factory outlets.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a adidas discount code right now?",
+      "a": "We haven't found a public adidas code on adidas.com at our last check (16 Oct 2026). There are still 3 offers that need no code, listed above."
+    },
+    {
+      "q": "How does VoucherVault check adidas codes?",
+      "a": "We only list offers we have seen on adidas's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my adidas code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/sportswear",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "adidas discount code",
+    "adidas promo code",
+    "adidas voucher code",
+    "adidas coupon",
+    "adidas student discount",
+    "adidas offers"
+  ],
+  "cardText": "30% off: 30% off for medical professionals, first responders, nurses, military & teachers",
+  "updated": "2026-10-16"
+}

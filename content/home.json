@@ -117,22 +117,22 @@
         {
           "slug": "categories/fashion",
           "title": "Fashion",
-          "text": "ASOS, Old Navy, Kohl's, UNIQLO"
+          "text": "ASOS, H&M, Old Navy, Kohl's, UNIQLO"
         },
         {
           "slug": "categories/sportswear",
           "title": "Sportswear & trainers",
-          "text": "Nike, PUMA, Under Armour, Gymshark"
+          "text": "Nike, adidas, PUMA, Under Armour, Gymshark"
         },
         {
           "slug": "categories/tech",
           "title": "Tech & laptops",
-          "text": "Dell, Lenovo, Samsung"
+          "text": "Dell, Lenovo, Samsung, Currys"
         },
         {
           "slug": "categories/beauty",
           "title": "Beauty",
-          "text": "LOOKFANTASTIC, Sephora"
+          "text": "LOOKFANTASTIC, Sephora, Boots"
         }
       ]
     },

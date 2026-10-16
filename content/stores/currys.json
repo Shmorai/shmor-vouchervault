@@ -1,0 +1,83 @@
+{
+  "generated": true,
+  "slug": "stores/currys",
+  "title": "Currys Discount Codes & Voucher Codes | VoucherVault",
+  "description": "4 live Currys offers, checked on currys.co.uk on 16 Oct 2026: Save 20% on selected Canon printers. Terms, end dates and tips.",
+  "nav": "Currys",
+  "h1": "Currys discount codes & offers",
+  "eyebrow": "Tech & laptops · UK",
+  "intro": "Currys is the UK electricals retailer for laptops, TVs, phones and appliances. It mixes product discounts with occasional checkout codes and a student extra.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+    "alt": "A laptop on a wooden table",
+    "credit": "Kari Shea",
+    "creditUrl": "https://unsplash.com/@karishea"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "currys",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "currys"
+      },
+      "tabs": true,
+      "title": "Currys codes & offers",
+      "intro": "Every offer below was checked on currys.co.uk. Tap a code to reveal and copy it."
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "store": "currys"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a Currys discount code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.currys.co.uk/\" rel=\"nofollow noopener\" target=\"_blank\">currys.co.uk</a>, add the items you want to your basket and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at Currys",
+      "html": "<ul><li>Currys price-matches if you find it cheaper elsewhere.</li><li>Recycle old tech in store for a £5-off voucher.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Currys discount code right now?",
+      "a": "Yes. As of 16 Oct 2026 we found this code on currys.co.uk: <strong>20CANON</strong> (save 20% on selected Canon printers). Codes can end without notice, so the store's checkout has the final word."
+    },
+    {
+      "q": "Does Currys have a student discount?",
+      "a": "Yes: £50 off ASUS Chromebook CM15, plus an extra 10% for students until 27 Oct. Product discount shown on Currys; the student extra 10% runs until 27 October 2026."
+    },
+    {
+      "q": "How does VoucherVault check Currys codes?",
+      "a": "We only list offers we have seen on Currys's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my Currys code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/tech",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "currys discount code",
+    "currys promo code",
+    "currys voucher code",
+    "currys coupon",
+    "currys student discount",
+    "currys offers"
+  ],
+  "cardText": "20% off: Save 20% on selected Canon printers",
+  "updated": "2026-10-16"
+}

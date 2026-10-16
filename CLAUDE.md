@@ -30,14 +30,24 @@ A Shmor marketplace (shared rules in `../../CLAUDE.md`): its own brand, design a
 - **Before launch:** pick a provider (recommended **Kit**, free to 10,000 subscribers, double opt-in, RSS-to-email). Set the forms' `action`/field names (footer band in layout.html, `signupForm` in tools/blocks.js, `formHtml` in assets/site.js), import any stored sign-ups, remove temporary paths.
 - **Automatic emails:** `tools/sync-stores.js` writes `/feeds/codes.xml` (50 newest live offers). Point the provider's RSS-to-email campaign at `https://vouchervault.shmor.ai/feeds/codes.xml` (weekly) so subscribers get new codes without manual sends; tag by interest/store for segments.
 
+## Twice-weekly code refresh (Tue + Fri mornings)
+Recurring in-chat job (cron `17 8 * * 2,5`, set up 2026-10-16 in the "VoucherVault code refresh" session). **Limits:** it lives only in that Claude session (gone if the app/session closes) and auto-expires after 7 days, so re-create it (or move it to a desktop scheduled task) when it lapses. Each run:
+1. For every offer in `data/vouchers.json`, open its `source` on the brand's own site (built-in browser when plain fetch is blocked; a page's `textContent` often holds banner/terms text that `innerText` hides). Confirm it is still shown; set `verified` to today; fix terms/end dates; remove offers that are gone.
+2. Add new codes from the same brands' homepage banners / official offer pages, and new global brands only where a live offer is visible on the brand's own site. Never other coupon sites; never bypass bot checks (The North Face's discount-programme pages show one).
+3. Keep the file's compact layout (store = 3 lines; offer = 2 lines, grouped by store).
+4. `node tools/sync-stores.js && node tools/build.js` → `node tools/preview-export.js ../../previews/vouchervault` → republish the preview artifact with all files → in `../../shmor-ai`: `node tools/sync-network.js && node tools/test-network.js` → commit both repos (don't push without asking) → add a line to the log below.
+
+### Refresh log
+- **2026-10-16:** all 36 offers re-seen live. Fixes: PUMA STOCKUP now 40% off 4+ (ends 20 Oct), UNIQLO app $10 needs $75+, Kohl's GET20 in store too, ASOS £500/€690 cap, Samsung Fold8 ends 2 Nov. Added 18 offers on existing brands (UA student 20%, PUMA email 20%, Old Navy text $10, Kohl's email 15%, UNIQLO email/SMS/refer, Gymshark free shipping, 3 LOOKFANTASTIC gifts, Sephora LIFTCREAM/THREEGIFT/MJGIFT/4XHYDRATE, Lenovo Rewards, Samsung PYPL100 + S26 FE) and 4 brands: adidas (adiClub 15%, heroes 30%, free shipping), Boots (SAVE23, COSY20, MENO20, BABY10), Currys (20CANON + 3 deals), H&M (15% off $100 / 20% off $125 to 18 Oct). 66 offers, 18 stores.
+
 ## Going live with affiliate codes
 1. Join programmes (Awin, CJ, Impact, Rakuten, Partnerize). Many voucher programmes require approval as a "voucher/coupon" publisher.
 2. Export the network's voucher/promotions file as CSV, then `node tools/import-feed.js <file.csv> --network awin` (add `--dry` to preview). Advertiser names are matched to stores (`name` or `aliases`); tracking URLs are pasted unchanged into `shmor-site.json` links as `<store>-<network>`.
 3. For a brand-level referral link (all deals for a store), add it to `links` and set the store's `"link": "<slug>"` in the data.
 4. `node tools/sync-stores.js && node tools/build.js`, then sync the master and commit both repos.
 
-## Pages (34)
-Home (stats → ending-soon ticker → hot codes → popular stores → ending soon → latest codes → categories → advice posts → sale dates → how we check → FAQ) · voucher-codes · hot-deals · expiring-soon · stores (A–Z) + 14 store pages · categories (+ fashion, sportswear, tech, beauty) · student-discounts · key-worker-discounts · black-friday (27 Nov 2026 / Cyber Monday 30 Nov) · how-we-check (editorial standards) · blog "Saving advice" + 5 posts (why codes don't work, finding codes that work, student verification, Singles' Day, sign-up discounts).
+## Pages (38)
+Home (stats → ending-soon ticker → hot codes → popular stores → ending soon → latest codes → categories → advice posts → sale dates → how we check → FAQ) · voucher-codes · hot-deals · expiring-soon · stores (A–Z) + 18 store pages · categories (+ fashion, sportswear, tech, beauty) · student-discounts · key-worker-discounts · black-friday (27 Nov 2026 / Cyber Monday 30 Nov) · how-we-check (editorial standards) · blog "Saving advice" + 5 posts (why codes don't work, finding codes that work, student verification, Singles' Day, sign-up discounts).
 Top menu: All codes, Hot deals, Ending soon, Stores, Categories, Student, Black Friday, Saving advice. Region switch (All/US/UK/EU, remembered) in the header filters every offer list.
 
 ## Design
@@ -57,4 +67,4 @@ node tools/serve.js 4024                           # preview (config "vouchervau
 After changing `shmor-site.json`, also run `node tools/sync-network.js` in `../../shmor-ai`.
 
 ## Ideas / next
-Re-check codes twice a week (scheduled job) · join Awin/CJ/Impact voucher programmes and import feeds · more global brands (Amazon, Apple, eBay, Adidas, H&M, Zara, Booking.com, Expedia, Samsung UK, Currys, Boots) once codes are confirmed on their sites · EU-region offers (none yet) · newsletter "this week's codes".
+join Awin/CJ/Impact voucher programmes and import feeds · more global brands (Amazon, Apple, eBay, Zara, Booking.com, Expedia, Samsung UK) once codes are confirmed on their sites · EU-region offers (none yet) · newsletter "this week's codes".

@@ -1,0 +1,79 @@
+{
+  "generated": true,
+  "slug": "stores/boots",
+  "title": "Boots Discount Codes & Voucher Codes | VoucherVault",
+  "description": "4 live Boots offers, checked on boots.com on 16 Oct 2026: Save 23% on selected premium beauty & No7. Terms, end dates and tips.",
+  "nav": "Boots",
+  "h1": "Boots discount codes & offers",
+  "eyebrow": "Beauty · UK",
+  "intro": "Boots is the UK health and beauty chemist. Its homepage runs short, dated online codes on beauty, fragrance, baby and wellness, plus Advantage Card point offers.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796",
+    "alt": "Assorted cosmetics and make-up products",
+    "credit": "Jazmin Quaynor",
+    "creditUrl": "https://unsplash.com/@jazminantoinette"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "boots",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "boots"
+      },
+      "tabs": true,
+      "title": "Boots codes & offers",
+      "intro": "Every offer below was checked on boots.com. Tap a code to reveal and copy it."
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "store": "boots"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a Boots discount code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.boots.com/\" rel=\"nofollow noopener\" target=\"_blank\">boots.com</a>, add the items you want to your basket and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at Boots",
+      "html": "<ul><li>Boots codes are online only, one per order, and usually last a few days.</li><li>Some offers need an Advantage Card linked to your account.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Boots discount code right now?",
+      "a": "Yes. As of 16 Oct 2026 we found these codes on boots.com: <strong>SAVE23</strong> (save 23% on selected premium beauty & No7); <strong>COSY20</strong> (save 20% on selected scents & fragrance gift sets); <strong>MENO20</strong> (save 20% on selected menopause support products); <strong>BABY10</strong> (save 10% when you spend £30 on selected baby). Codes can end without notice, so the store's checkout has the final word."
+    },
+    {
+      "q": "How does VoucherVault check Boots codes?",
+      "a": "We only list offers we have seen on Boots's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my Boots code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/beauty",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "boots discount code",
+    "boots promo code",
+    "boots voucher code",
+    "boots coupon",
+    "boots student discount",
+    "boots offers"
+  ],
+  "cardText": "23% off: Save 23% on selected premium beauty & No7",
+  "updated": "2026-10-16"
+}
