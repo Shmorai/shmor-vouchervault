@@ -4,7 +4,7 @@
   "name": "VoucherVault",
   "subdomain": "vouchervault",
   "order": 30,
-  "status": "building",
+  "status": "live",
   "icon": "tag",
   "accent": "#E5136F",
   "blurb": "Live voucher codes, promo codes and coupons for the world's biggest brands, checked against the brands' own sites, with hot deals, expiring-soon offers and saving advice.",
