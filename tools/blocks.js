@@ -26,6 +26,17 @@ const addDays = (d, n) => new Date(Date.parse(d + 'T00:00:00Z') + n * DAY).toISO
 const daysTo = d => Math.round((Date.parse(d + 'T00:00:00Z') - Date.parse(TODAY + 'T00:00:00Z')) / DAY);
 const fmt = d => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'UTC' });
 const fmtShort = d => new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', { day: 'numeric', month: 'short', timeZone: 'UTC' });
+// Codes are unlocked with email + phone (assets/site.js), so they never appear in the page text:
+// any mention of an offer's code in its title/terms is replaced with "the code".
+// Every offer's code is hidden (an offer's terms can mention a sister code, e.g. NEWHERE / HEYAPP).
+const mask = text => DATA.offers.filter(o => o.code).reduce((t, o) => {
+  const c = o.code.replace(/[^A-Za-z0-9]/g, '\\$&');
+  return t.replace(new RegExp(`\\b(use|enter|with)(?: the)? (?:promo |discount )?code ${c}\\b`, 'gi'), '$1 the code')
+    .replace(new RegExp(`\\b(?:the )?(?:promo |discount )?code ${c}\\b`, 'gi'), 'the code')
+    .replace(new RegExp(`\\b(?:with )?eCoupon ${c}\\b`, 'gi'), 'with an eCoupon')
+    .replace(new RegExp(`\\bthe ${c}\\b`, 'g'), 'the code')
+    .replace(new RegExp(`\\b${c}\\b`, 'g'), 'the code');
+}, String(text ?? '')).replace(/(^|[.!?]\s+)the code/g, '$1The code');
 const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
 
 // When an offer with no end date must be re-checked (or it is hidden)
@@ -77,17 +88,17 @@ function card(o, p, kit) {
   const ends = o.expires ? `<span class="vc-ends${daysTo(o.expires) <= 3 ? ' is-soon' : ''}" data-ends="${o.expires}">${svg(ICO.clock, 14)} Ends ${fmtShort(o.expires)}</span>` : '';
   const onStore = p.slug === `stores/${o.store}`;
   const cta = o.kind === 'code'
-    ? `<button type="button" class="vc-btn vc-get" data-reveal="${esc(o.id)}"><span class="vc-btn-label">Get code</span><span class="vc-peek" aria-hidden="true">${esc(o.code.slice(-3))}</span></button>`
+    ? `<button type="button" class="vc-btn vc-get" data-reveal="${esc(o.id)}"><span class="vc-btn-label">Get code</span><span class="vc-peek" aria-hidden="true">•••</span></button>`
     : `<a class="vc-btn vc-deal" href="${esc(offerHref)}" ${rel} data-out="${esc(o.id)}">Get ${o.kind === 'member' ? 'offer' : o.kind === 'gift' ? 'gift' : 'deal'}</a>`;
   return `<article class="vc vc-${esc(o.kind)}" id="o-${esc(o.id)}" data-kind="${esc(o.kind)}" data-regions="${esc(regions.join(' '))}"${o.expires ? ` data-expires="${o.expires}"` : ` data-checkby="${checkBy(o)}"`}
-  data-store="${esc(s.name)}" data-store-id="${esc(o.store)}" data-title="${esc(o.title)}" data-href="${esc(offerHref)}" data-aff="${aff ? 1 : 0}"${o.code ? ` data-code="${esc(o.code)}"` : ''}>
+  data-store="${esc(s.name)}" data-store-id="${esc(o.store)}" data-title="${esc(mask(o.title, o.code))}" data-href="${esc(offerHref)}" data-aff="${aff ? 1 : 0}">
   ${onStore ? logo(s, o.store, kit, 'span') : logo(s, o.store, kit)}
   <div class="vc-val"><strong>${esc(o.value)}</strong>${valueLabel(o) ? `<span>${esc(valueLabel(o))}</span>` : ''}</div>
   <div class="vc-body">
     <p class="vc-tags"><span class="vc-kind">${esc(DATA.kinds[o.kind])}</span>${o.hot ? `<span class="vc-hot">${svg(ICO.flame, 13)} Hot</span>` : ''}${o.first ? '<span class="vc-new">New customers</span>' : ''}${(o.groups || []).includes('student') ? '<span class="vc-new">Students</span>' : ''}${onStore ? '' : `<a class="vc-store" href="/stores/${esc(o.store)}/">${esc(s.name)}</a>`}<span class="vc-reg">${regions.map(r => esc(DATA.regions[r] || r)).join(' · ')}</span></p>
-    <h3>${esc(o.title)}</h3>
+    <h3>${esc(mask(o.title, o.code))}</h3>
     <p class="vc-sub"><span class="vc-check">${svg(ICO.check, 14)} ${o.via ? `From ${esc(s.name)}'s ${esc(o.via)} feed` : `Checked on ${esc(host(o.source))}`} · ${fmt(o.verified)}</span>${ends}</p>
-    <details class="vc-terms"><summary>Terms &amp; details</summary><p>${esc(o.terms || 'See the store for full terms.')}</p><p class="vc-src">Source: <a href="${esc(o.source)}" rel="nofollow noopener" target="_blank">${esc(host(o.source))} ${svg(ICO.ext, 12)}</a>${o.expires ? ` · Ends ${fmt(o.expires)}` : ' · No end date published'}</p></details>
+    <details class="vc-terms"><summary>Terms &amp; details</summary><p>${esc(mask(o.terms || 'See the store for full terms.', o.code))}</p><p class="vc-src">Source: <a href="${esc(o.source)}" rel="nofollow noopener" target="_blank">${esc(host(o.source))} ${svg(ICO.ext, 12)}</a>${o.expires ? ` · Ends ${fmt(o.expires)}` : ' · No end date published'}</p></details>
   </div>
   <div class="vc-cta">${cta}</div>
 </article>`;
@@ -216,3 +227,4 @@ module.exports._data = DATA;
 module.exports._live = live;
 module.exports._liveFor = liveFor;
 module.exports._fmt = fmt;
+module.exports._mask = mask;

@@ -140,15 +140,33 @@
   });
   apply();
 
-  // 3. Code reveal modal
+  // 3. Code reveal: the first time, the visitor enters email + phone to unlock codes (remembered on this
+  //    device), then the code shows with a copy button. Codes live in assets/codes.json, not in the page.
+  var SRC = (document.currentScript && document.currentScript.src) || '/assets/site.js';
+  var CODES_URL = SRC.replace(/site\.js(\?.*)?$/, 'codes.json'), codesP = null;
+  var getCodes = function () { return codesP || (codesP = fetch(CODES_URL).then(function (r) { return r.json(); }).catch(function () { codesP = null; return {}; })); };
+  var decode = function (v) { try { return decodeURIComponent(escape(atob(String(v).split('').reverse().join('')))); } catch (e) { return ''; } };
+  var UNLOCK = 'vv-unlocked';
+  var unlocked = function () { return store.get(UNLOCK) === '1'; };
   var modal = document.createElement('div');
   modal.className = 'vv-modal'; modal.hidden = true;
   modal.innerHTML = '<div class="vv-box" role="dialog" aria-modal="true" aria-labelledby="vv-title">' +
     '<button type="button" class="vv-x" aria-label="Close">×</button><p class="vv-store"></p><h2 class="vv-title" id="vv-title"></h2>' +
-    '<div class="vv-code"><output aria-live="polite"></output><button type="button" class="vv-copy">Copy</button></div><p class="vv-copied" aria-live="polite"></p>' +
-    '<a class="vc-btn vc-deal vv-go" target="_blank"></a><p class="vv-note"></p></div>';
+    '<form class="vv-gate" novalidate action="" method="post">' +
+      '<p class="vv-gate-lead"><b>Unlock this code.</b> Enter your details once and every code on VoucherVault unlocks on this device.</p>' +
+      '<label class="vv-f"><span>Email address</span><input type="email" name="email" id="vv-email" autocomplete="email" placeholder="you@example.com" required></label>' +
+      '<label class="vv-f"><span>Mobile number</span><input type="tel" name="phone" id="vv-phone" autocomplete="tel" inputmode="tel" placeholder="+44 7700 900123" required></label>' +
+      '<label class="vv-c"><input type="checkbox" name="terms" id="vv-terms" required><span>I agree to the <a href="https://shmor.ai/terms/" target="_blank" rel="noopener">Terms</a> and <a href="https://shmor.ai/privacy/" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>' +
+      '<label class="vv-c"><input type="checkbox" name="mkt_email" id="vv-mkt-email"><span>Email me new codes and offers ending soon (optional).</span></label>' +
+      '<label class="vv-c"><input type="checkbox" name="mkt_sms" id="vv-mkt-sms"><span>Text me big deals by SMS (optional). Msg &amp; data rates may apply. Reply STOP to opt out.</span></label>' +
+      '<p class="vv-err" role="alert" hidden></p>' +
+      '<button type="submit" class="vc-btn vv-unlock">Unlock code</button>' +
+      '<p class="vv-fine">We never sell your details. Unsubscribe from marketing at any time.</p>' +
+    '</form>' +
+    '<div class="vv-reveal"><div class="vv-code"><output aria-live="polite"></output><button type="button" class="vv-copy">Copy</button></div><p class="vv-copied" aria-live="polite"></p>' +
+    '<a class="vc-btn vc-deal vv-go" target="_blank"></a><p class="vv-note"></p></div></div>';
   document.body.appendChild(modal);
-  var last = null;
+  var last = null, current = null;
   var $ = function (s) { return modal.querySelector(s); };
   function copy(text) {
     var done = function () { $('.vv-copied').textContent = 'Copied! Paste it at checkout.'; $('.vv-copy').textContent = 'Copied'; };
@@ -156,25 +174,75 @@
     else select();
     function select() { var r = document.createRange(); r.selectNodeContents($('output')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); $('.vv-copied').textContent = 'Code selected: press Ctrl/⌘ + C to copy.'; }
   }
+  function showCode(card, btn) {
+    modal.classList.remove('is-gate');
+    getCodes().then(function (codes) {
+      var code = decode(codes[card.id.slice(2)]);
+      if (!code) { $('output').textContent = 'Code unavailable'; $('.vv-copied').textContent = 'This code may have just ended. Check the store’s own site.'; return; }
+      $('output').textContent = code;
+      $('.vv-copied').textContent = ''; $('.vv-copy').textContent = 'Copy';
+      $('.vv-copy').focus();
+      copy(code);
+      btn.classList.add('is-revealed');
+      var peek = btn.querySelector('.vc-peek'); if (peek) peek.textContent = code;
+    });
+  }
   function open(card, btn) {
-    last = btn;
-    var code = card.getAttribute('data-code'), href = card.getAttribute('data-href'), aff = card.getAttribute('data-aff') === '1', name = card.getAttribute('data-store');
+    last = btn; current = { card: card, btn: btn };
+    var href = card.getAttribute('data-href'), aff = card.getAttribute('data-aff') === '1', name = card.getAttribute('data-store');
     $('.vv-store').textContent = name;
     $('.vv-title').textContent = card.getAttribute('data-title');
-    $('output').textContent = code;
-    $('.vv-copied').textContent = ''; $('.vv-copy').textContent = 'Copy';
     var go = $('.vv-go'); go.href = href; go.textContent = 'Go to ' + name + ' ↗';
     go.rel = aff ? 'sponsored nofollow noopener' : 'nofollow noopener';
     var terms = card.querySelector('.vc-terms p');
     $('.vv-note').textContent = terms ? terms.textContent : '';
+    $('output').textContent = ''; $('.vv-copied').textContent = '';
     modal.hidden = false;
     document.documentElement.style.overflow = 'hidden';
-    $('.vv-copy').focus();
-    copy(code);
-    btn.classList.add('is-revealed');
-    var peek = btn.querySelector('.vc-peek'); if (peek) peek.textContent = code;
     if (history.replaceState) history.replaceState(null, '', '#' + card.id);
+    if (unlocked()) showCode(card, btn);
+    else { modal.classList.add('is-gate'); $('.vv-err').hidden = true; getCodes(); setTimeout(function () { $('#vv-email').focus(); }, 30); }
   }
+  // Save the unlock details: provider (gate form action) -> private preview db ("leads") -> local preview server
+  function saveLead(row) {
+    var action = $('.vv-gate').getAttribute('action');
+    var viaProvider = function () {
+      if (!action) return Promise.reject(new Error('no provider'));
+      var fd = new FormData(); Object.keys(row).forEach(function (k) { fd.append(k, row[k]); });
+      return fetch(action, { method: 'POST', body: fd, headers: { Accept: 'application/json' } }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); });
+    };
+    var viaDb = function () {
+      if (!window.claude || !window.claude.use) return Promise.reject(new Error('no viewer'));
+      return window.claude.use('db').then(function (db) { if (!db) throw new Error('no db'); return db.collection('leads').add(row); });
+    };
+    var viaLocal = function () {
+      return fetch('/api/lead', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(row) }).then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); });
+    };
+    return viaProvider().catch(viaDb).catch(viaLocal);
+  }
+  modal.addEventListener('submit', function (e) {
+    var form = e.target.closest('.vv-gate'); if (!form) return;
+    e.preventDefault();
+    var err = $('.vv-err'), say = function (t, el) { err.textContent = t; err.hidden = false; if (el) el.focus(); };
+    var email = $('#vv-email'), phone = $('#vv-phone'), terms = $('#vv-terms');
+    var digits = phone.value.replace(/\D/g, '');
+    if (!email.value || !email.checkValidity()) return say('Please enter a valid email address.', email);
+    if (!/^\+?[\d\s().-]+$/.test(phone.value.trim()) || digits.length < 7 || digits.length > 15) return say('Please enter a valid mobile number, including the country code if you’re outside the UK.', phone);
+    if (!terms.checked) return say('Please agree to the Terms and Privacy Policy to unlock codes.', terms);
+    err.hidden = true;
+    var btn = form.querySelector('.vv-unlock'); btn.disabled = true; btn.textContent = 'Unlocking…';
+    var c = current && current.card;
+    var row = { email: email.value.trim().toLowerCase(), phone: phone.value.trim(), termsAccepted: true,
+      marketingEmail: $('#vv-mkt-email').checked, marketingSms: $('#vv-mkt-sms').checked,
+      store: c ? c.getAttribute('data-store-id') : '', offer: c ? c.id.slice(2) : '', page: location.pathname, createdAt: new Date().toISOString() };
+    saveLead(row).catch(function () { /* nothing could store it (no provider yet): still unlock, so codes never break */ })
+      .then(function () {
+        store.set(UNLOCK, '1');
+        if (row.marketingEmail) store.set('vv-subscribed', '1');
+        btn.disabled = false; btn.textContent = 'Unlock code';
+        if (current) showCode(current.card, current.btn);
+      });
+  });
   function close() {
     modal.hidden = true; document.documentElement.style.overflow = '';
     if (last) last.focus();
@@ -189,20 +257,15 @@
     if (modal.hidden) return;
     if (e.key === 'Escape') close();
     if (e.key === 'Tab') { // keep focus inside the dialog
-      var f = modal.querySelectorAll('button, a[href], input'), first = f[0], lastEl = f[f.length - 1];
+      var f = [].filter.call(modal.querySelectorAll('button, a[href], input'), function (el) { return el.offsetParent !== null; }), first = f[0], lastEl = f[f.length - 1];
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); lastEl.focus(); }
       else if (!e.shiftKey && document.activeElement === lastEl) { e.preventDefault(); first.focus(); }
     }
   });
-  // Arriving with #o-<id> (e.g. from the ticker): make sure the card shows and show its code in place
+  // Arriving with #o-<id> (e.g. from the ticker): make sure the card shows
   if (/^#o-/.test(location.hash)) {
     var t = document.getElementById(location.hash.slice(1));
-    if (t) {
-      t.hidden = false;
-      var rb = t.querySelector('[data-reveal]'), pk = rb && rb.querySelector('.vc-peek');
-      if (pk) { rb.classList.add('is-revealed'); pk.textContent = t.getAttribute('data-code'); }
-      t.scrollIntoView({ block: 'center' });
-    }
+    if (t) { t.hidden = false; t.scrollIntoView({ block: 'center' }); }
   }
 })();
 
@@ -213,7 +276,7 @@
      2. in the private claude.ai preview's database (collection "signups"), else
      3. on the local preview server (tools/serve.js -> subscribers/signups.csv, git-ignored).
    It only says "you're in" when one of those really saved it.
-   Also: a dismissible slide-in prompt and a one-field form in the code modal.
+   Also: a dismissible slide-in prompt.
    ===================================================================== */
 (function () {
   'use strict';
@@ -277,16 +340,4 @@
     if (band && 'IntersectionObserver' in window) new IntersectionObserver(function (es) { slide.classList.toggle('is-tucked', es[0].isIntersecting); }).observe(band);
   }
 
-  // Code modal: add "email me new <store> codes" under the copy box
-  var box = document.querySelector('.vv-box');
-  if (box && !ls.get(KEY)) {
-    var mini = document.createElement('div');
-    mini.className = 'vv-alert';
-    box.appendChild(mini);
-    document.addEventListener('click', function (e) {
-      var b = e.target.closest('[data-reveal]'); if (!b || ls.get(KEY)) { mini.innerHTML = ''; return; }
-      var card = b.closest('.vc'), store = card.getAttribute('data-store-id') || '';
-      mini.innerHTML = '<p class="vv-alert-t">Want the next ' + card.getAttribute('data-store').replace(/</g, '') + ' code by email?</p>' + formHtml('code-modal', store, 'Alert me');
-    });
-  }
 })();

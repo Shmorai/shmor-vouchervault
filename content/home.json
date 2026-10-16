@@ -162,8 +162,8 @@
         },
         {
           "icon": "shield",
-          "title": "No sign-up, no tricks",
-          "text": "Free to use, no account, no browser extension. Some links may earn us a commission, at no cost to you."
+          "title": "Free, no tricks",
+          "text": "Free to use with no browser extension. Codes unlock once you add your email and mobile. Some links may earn us a commission, at no cost to you."
         }
       ]
     }
@@ -178,8 +178,8 @@
       "a": "Most codes have conditions: selected items only, a minimum spend, new customers only, app only, or one region only. Open the offer's terms and check your basket meets them. Read our guide: <a href=\"/blog/why-voucher-codes-dont-work/\">why voucher codes don't work</a>."
     },
     {
-      "q": "Do I need an account or a browser extension?",
-      "a": "No. VoucherVault is free, needs no sign-up and has no browser extension. Tap <strong>Get code</strong>, copy it and paste it at the store's checkout."
+      "q": "How do I unlock a code?",
+      "a": "Tap <strong>Get code</strong>, then enter your email address and mobile number once. Every code on VoucherVault then unlocks on that device. Marketing emails and texts are optional, and you can unsubscribe at any time. There is no browser extension to install."
     },
     {
       "q": "Which countries do you cover?",

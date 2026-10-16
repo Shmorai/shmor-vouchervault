@@ -23,6 +23,7 @@ const CAT_IMG = {
   tech: { src: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853', alt: 'A laptop on a wooden table', credit: 'Kari Shea', creditUrl: 'https://unsplash.com/@karishea' },
   beauty: { src: 'https://images.unsplash.com/photo-1512496015851-a90fb38ba796', alt: 'Assorted cosmetics and make-up products', credit: 'Jazmin Quaynor', creditUrl: 'https://unsplash.com/@jazminantoinette' },
 };
+const M = blocks._mask; // codes stay hidden until unlocked (email + phone), so pages never print them
 const fit = (s, max) => s.length <= max ? s : s.slice(0, max - 1).replace(/\s+\S*$/, '') + '…';
 
 fs.mkdirSync(DIR, { recursive: true });
@@ -41,19 +42,20 @@ for (const [id, s] of Object.entries(DATA.stores)) {
   const cat = DATA.categories[s.category] || {};
 
   const head = `${list.length || 'No'} live ${s.name} offer${list.length === 1 ? '' : 's'}, checked on ${site} on ${blocks._fmt(last)}`;
-  let description = best ? `${head}: ${best.title}.` : `${head}.`;
+  let description = best ? `${head}: ${M(best.title)}.` : `${head}.`;
   const tail = ' Terms, end dates and tips.';
-  if (description.length > 158) description = fit(`${head}: ${best.title}`, 157) + '.';
+  if (description.length > 158) description = fit(`${head}: ${M(best.title)}`, 157) + '.';
   else if (description.length + tail.length <= 158) description += tail;
   if (description.length < 120) description = fit(description + ` See how to use ${s.name} codes and save more.`, 158);
 
-  const codeList = codes.map(o => `<strong>${o.code}</strong> (${o.title.charAt(0).toLowerCase() + o.title.slice(1)})`).join('; ');
+  const lc = t => { t = M(t); return t.charAt(0).toLowerCase() + t.slice(1); };
+  const codeList = codes.map(o => lc(o.title)).join('; ');
   const faqs = [
     { q: `Is there a ${s.name} discount code right now?`, a: codes.length
-      ? `Yes. As of ${blocks._fmt(last)} we found ${codes.length === 1 ? 'this code' : 'these codes'} on ${site}: ${codeList}. Codes can end without notice, so the store's checkout has the final word.`
+      ? `Yes. As of ${blocks._fmt(last)} we found ${codes.length === 1 ? 'a code' : `${codes.length} codes`} on ${site}: ${codeList}. Tap <strong>Get code</strong> above to unlock ${codes.length === 1 ? 'it' : 'them'}. Codes can end without notice, so the store's checkout has the final word.`
       : `We haven't found a public ${s.name} code on ${site} at our last check (${blocks._fmt(last)}). ${list.length ? `There ${list.length === 1 ? 'is' : 'are'} still ${list.length} offer${list.length === 1 ? '' : 's'} that need no code, listed above.` : 'Check back soon: we re-check regularly.'}` },
     student.length
-      ? { q: `Does ${s.name} have a student discount?`, a: `Yes: ${student.map(o => o.title.charAt(0).toLowerCase() + o.title.slice(1)).join('; ')}. ${student[0].terms}` }
+      ? { q: `Does ${s.name} have a student discount?`, a: `Yes: ${student.map(o => lc(o.title)).join('; ')}. ${M(student[0].terms)}` }
       : null,
     { q: `How does VoucherVault check ${s.name} codes?`, a: `We only list offers we have seen on ${s.name}'s own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently.` },
     { q: `Why isn't my ${s.name} code working?`, a: `The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them.` },
@@ -73,17 +75,17 @@ for (const [id, s] of Object.entries(DATA.stores)) {
     ctaSearch: false,
     blocks: [
       { type: 'storeinfo', store: id, position: 'top' },
-      { type: 'offers', position: 'top', preset: { store: id }, tabs: true, title: `${s.name} codes & offers`, intro: `Every offer below was checked on ${site}. Tap a code to reveal and copy it.` },
+      { type: 'offers', position: 'top', preset: { store: id }, tabs: true, title: `${s.name} codes & offers`, intro: `Every offer below was checked on ${site}. Tap Get code to unlock and copy it.` },
       { type: 'alerts', position: 'top', store: id },
     ],
     sections: [
-      { h2: `How to use a ${s.name} ${uk ? 'discount code' : 'promo code'}`, html: `<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href="${s.url}" rel="nofollow noopener" target="_blank">${site}</a>, add the items you want to your ${uk ? 'basket' : 'cart'} and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>` },
+      { h2: `How to use a ${s.name} ${uk ? 'discount code' : 'promo code'}`, html: `<ol><li>Pick an offer above and tap <strong>Get code</strong>. The first time, enter your email and mobile to unlock codes, then copy it (deals and member perks need no code).</li><li>Open <a href="${s.url}" rel="nofollow noopener" target="_blank">${site}</a>, add the items you want to your ${uk ? 'basket' : 'cart'} and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>` },
       { h2: `Tips for saving at ${s.name}`, html: `<ul>${(s.tips || []).map(t => `<li>${t}</li>`).join('')}</ul>` },
     ],
     faqs,
     related: [cat.page, 'voucher-codes', 'blog/why-voucher-codes-dont-work'].filter(Boolean),
     keywords: [`${s.name} discount code`, `${s.name} promo code`, `${s.name} voucher code`, `${s.name} coupon`, `${s.name} student discount`, `${s.name} offers`].map(k => k.toLowerCase()),
-    cardText: best ? `${best.value} ${best.valueLabel || 'off'}: ${best.title}` : `${s.name} offers and saving tips`,
+    cardText: best ? `${best.value} ${best.valueLabel || 'off'}: ${M(best.title)}` : `${s.name} offers and saving tips`,
     updated: last,
   };
   fs.writeFileSync(file, JSON.stringify(page, null, 2) + '\n');
@@ -104,8 +106,8 @@ for (const f of fs.readdirSync(DIR)) {
     .sort((p, q) => q.verified.localeCompare(p.verified) || (p.expires || '9').localeCompare(q.expires || '9')).slice(0, 50)
     .map(o => {
       const st = DATA.stores[o.store];
-      const desc = `${o.code ? `Code: ${o.code}. ` : ''}${o.terms}${o.expires ? ` Ends ${blocks._fmt(o.expires)}.` : ''}`;
-      return `<item><title>${x(`${st.name}: ${o.title}`)}</title><link>${BASE}/stores/${o.store}/#o-${o.id}</link><guid isPermaLink="false">${x(o.id)}-${o.verified}</guid><pubDate>${new Date(o.verified + 'T08:00:00Z').toUTCString()}</pubDate><category>${x(st.category)}</category><description>${x(desc)}</description></item>`;
+      const desc = `${o.code ? 'Unlock the code on VoucherVault. ' : ''}${M(o.terms)}${o.expires ? ` Ends ${blocks._fmt(o.expires)}.` : ''}`;
+      return `<item><title>${x(`${st.name}: ${M(o.title)}`)}</title><link>${BASE}/stores/${o.store}/#o-${o.id}</link><guid isPermaLink="false">${x(o.id)}-${o.verified}</guid><pubDate>${new Date(o.verified + 'T08:00:00Z').toUTCString()}</pubDate><category>${x(st.category)}</category><description>${x(desc)}</description></item>`;
     });
   fs.mkdirSync(path.join(ROOT, 'feeds'), { recursive: true });
   fs.writeFileSync(path.join(ROOT, 'feeds', 'codes.xml'), `<?xml version="1.0" encoding="UTF-8"?>
@@ -115,5 +117,10 @@ for (const f of fs.readdirSync(DIR)) {
 ${items.join('\n')}
 </channel></rss>
 `);
+}
+{
+  const enc = c => Buffer.from(c, 'utf8').toString('base64').split('').reverse().join('');
+  const codes = Object.fromEntries(blocks._live().filter(o => o.code).map(o => [o.id, enc(o.code)]));
+  fs.writeFileSync(path.join(ROOT, 'assets', 'codes.json'), JSON.stringify(codes));
 }
 console.log(`✓ ${wanted.size} store pages in content/stores/ + feeds/codes.xml`);

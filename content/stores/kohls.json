@@ -29,7 +29,7 @@
       },
       "tabs": true,
       "title": "Kohl's codes & offers",
-      "intro": "Every offer below was checked on kohls.com. Tap a code to reveal and copy it."
+      "intro": "Every offer below was checked on kohls.com. Tap Get code to unlock and copy it."
     },
     {
       "type": "alerts",
@@ -40,7 +40,7 @@
   "sections": [
     {
       "h2": "How to use a Kohl's promo code",
-      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.kohls.com/\" rel=\"nofollow noopener\" target=\"_blank\">kohls.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong>. The first time, enter your email and mobile to unlock codes, then copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.kohls.com/\" rel=\"nofollow noopener\" target=\"_blank\">kohls.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
     },
     {
       "h2": "Tips for saving at Kohl's",
