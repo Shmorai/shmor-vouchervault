@@ -33,6 +33,10 @@
       "preset": {
         "first": true
       }
+    },
+    {
+      "type": "alerts",
+      "position": "top"
     }
   ],
   "sections": [

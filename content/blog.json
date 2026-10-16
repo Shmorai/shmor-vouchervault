@@ -15,5 +15,10 @@
     "creditUrl": "https://unsplash.com/@freestocks"
   },
   "listTitle": "Latest guides",
-  "updated": "2026-10-16"
+  "updated": "2026-10-16",
+  "blocks": [
+    {
+      "type": "alerts"
+    }
+  ]
 }

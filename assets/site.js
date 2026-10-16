@@ -189,7 +189,7 @@
     if (modal.hidden) return;
     if (e.key === 'Escape') close();
     if (e.key === 'Tab') { // keep focus inside the dialog
-      var f = modal.querySelectorAll('button, a[href]'), first = f[0], lastEl = f[f.length - 1];
+      var f = modal.querySelectorAll('button, a[href], input'), first = f[0], lastEl = f[f.length - 1];
       if (e.shiftKey && document.activeElement === first) { e.preventDefault(); lastEl.focus(); }
       else if (!e.shiftKey && document.activeElement === lastEl) { e.preventDefault(); first.focus(); }
     }
@@ -203,5 +203,90 @@
       if (pk) { rb.classList.add('is-revealed'); pk.textContent = t.getAttribute('data-code'); }
       t.scrollIntoView({ block: 'center' });
     }
+  }
+})();
+
+/* =====================================================================
+   VoucherVault Code Alerts (email sign-up). Every form[data-newsletter]:
+   checks email + consent, then saves the sign-up
+     1. to a mailing-list provider when the form has an action (set it once a provider is chosen), else
+     2. in the private claude.ai preview's database (collection "signups"), else
+     3. on the local preview server (tools/serve.js -> subscribers/signups.csv, git-ignored).
+   It only says "you're in" when one of those really saved it.
+   Also: a dismissible slide-in prompt and a one-field form in the code modal.
+   ===================================================================== */
+(function () {
+  'use strict';
+  var KEY = 'vv-subscribed', HIDE = 'vv-alerts-hidden-until';
+  var ls = { get: function (k) { try { return localStorage.getItem(k); } catch (e) { return null; } }, set: function (k, v) { try { localStorage.setItem(k, v); } catch (e) { /* private mode */ } } };
+  var CONSENT = 'Email me VoucherVault code alerts. I can unsubscribe at any time. <a href="https://shmor.ai/privacy/">Privacy policy</a>.';
+  function formHtml(placement, store, btn) {
+    var id = 'nl-' + placement + '-' + Math.random().toString(36).slice(2, 7);
+    return '<form class="nl-form nl-compact" data-newsletter data-placement="' + placement + '" action="" method="post" target="_blank" novalidate>' +
+      (store ? '<input type="hidden" name="store" value="' + store + '">' : '') +
+      '<div class="nl-row"><label class="sr" for="' + id + '">Email address</label><input id="' + id + '" type="email" name="email" placeholder="you@example.com" autocomplete="email" required><button type="submit">' + (btn || 'Get alerts') + '</button></div>' +
+      '<label class="nl-consent"><input type="checkbox" name="consent" required><span>' + CONSENT + '</span></label><p class="nl-msg" data-newsletter-msg role="status" hidden></p></form>';
+  }
+  function viaPreviewDb(row) {
+    if (!window.claude || !window.claude.use) return Promise.reject(new Error('no viewer'));
+    return window.claude.use('db').then(function (db) { if (!db) throw new Error('no db'); return db.collection('signups').add(row); });
+  }
+  function viaLocalServer(row) {
+    return fetch('/api/newsletter', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(row) })
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); });
+  }
+  function done() {
+    ls.set(KEY, '1');
+    var s = document.querySelector('.nl-slide'); if (s) s.hidden = true;
+  }
+  document.addEventListener('submit', function (e) {
+    var form = e.target.closest('form[data-newsletter]'); if (!form) return;
+    var msg = form.querySelector('[data-newsletter-msg]'), btn = form.querySelector('button[type=submit]');
+    var say = function (t) { msg.textContent = t; msg.hidden = false; };
+    var email = form.querySelector('input[type=email]'), consent = form.querySelector('input[name=consent]');
+    if (!email.value || !email.checkValidity()) { e.preventDefault(); say('Please enter a valid email address.'); email.focus(); return; }
+    if (!consent.checked) { e.preventDefault(); say('Please tick the box so we can email you.'); consent.focus(); return; }
+    if (form.getAttribute('action')) { done(); say('Almost there! Check your inbox to confirm.'); return; }
+    e.preventDefault();
+    var interests = [].map.call(form.querySelectorAll('input[name=interest]:checked'), function (x) { return x.value; });
+    var store = form.querySelector('input[name=store]');
+    var row = { email: email.value.trim().toLowerCase(), consent: true, list: 'code-alerts', interests: interests.join(' '),
+      store: store ? store.value : '', placement: form.getAttribute('data-placement') || '', page: location.pathname, signedUpAt: new Date().toISOString() };
+    btn.disabled = true; say('Saving…');
+    viaPreviewDb(row).catch(function () { return viaLocalServer(row); }).then(function () {
+      form.classList.add('is-done'); email.value = ''; consent.checked = false; done();
+      say(row.store ? 'You’re in! We’ll email you new codes for this store.' : 'You’re in! Your first code alerts are on the way.');
+    }).catch(function () { say('We couldn’t save that just now. Please try again in a moment.'); })
+      .then(function () { btn.disabled = false; });
+  });
+
+  // Slide-in prompt: after the reader scrolls 40% or spends 25 s, once per 14 days, never after signing up
+  if (!ls.get(KEY) && Date.now() > Number(ls.get(HIDE) || 0)) {
+    var slide = document.createElement('aside');
+    slide.className = 'nl-slide'; slide.hidden = true; slide.setAttribute('aria-label', 'Code alerts');
+    slide.innerHTML = '<button type="button" class="nl-slide-x" aria-label="Close">×</button><p class="nl-slide-k">Free code alerts</p><h2>Get new codes before they’re gone</h2><p>One email a week with fresh codes and offers ending soon.</p>' + formHtml('slide-in');
+    document.body.appendChild(slide);
+    var shown = false;
+    var show = function () { var m = document.querySelector('.vv-modal'); if (shown || ls.get(KEY) || (m && !m.hidden)) return; shown = true; slide.hidden = false; };
+    var onScroll = function () { if ((scrollY + innerHeight) / document.documentElement.scrollHeight > 0.4) { show(); removeEventListener('scroll', onScroll); } };
+    addEventListener('scroll', onScroll, { passive: true });
+    setTimeout(show, 25000);
+    slide.querySelector('.nl-slide-x').addEventListener('click', function () { slide.hidden = true; ls.set(HIDE, String(Date.now() + 14 * 864e5)); });
+    // Hide it while the footer band is on screen
+    var band = document.getElementById('alerts');
+    if (band && 'IntersectionObserver' in window) new IntersectionObserver(function (es) { slide.classList.toggle('is-tucked', es[0].isIntersecting); }).observe(band);
+  }
+
+  // Code modal: add "email me new <store> codes" under the copy box
+  var box = document.querySelector('.vv-box');
+  if (box && !ls.get(KEY)) {
+    var mini = document.createElement('div');
+    mini.className = 'vv-alert';
+    box.appendChild(mini);
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-reveal]'); if (!b || ls.get(KEY)) { mini.innerHTML = ''; return; }
+      var card = b.closest('.vc'), store = card.getAttribute('data-store-id') || '';
+      mini.innerHTML = '<p class="vv-alert-t">Want the next ' + card.getAttribute('data-store').replace(/</g, '') + ' code by email?</p>' + formHtml('code-modal', store, 'Alert me');
+    });
   }
 })();

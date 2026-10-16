@@ -29,6 +29,10 @@
       "class": "band",
       "category": "beauty",
       "title": "Beauty stores"
+    },
+    {
+      "type": "alerts",
+      "position": "top"
     }
   ],
   "sections": [

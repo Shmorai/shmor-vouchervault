@@ -30,6 +30,11 @@
       "tabs": true,
       "title": "Samsung codes & offers",
       "intro": "Every offer below was checked on samsung.com. Tap a code to reveal and copy it."
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "store": "samsung"
     }
   ],
   "sections": [

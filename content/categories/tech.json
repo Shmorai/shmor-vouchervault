@@ -29,6 +29,10 @@
       "class": "band",
       "category": "tech",
       "title": "Tech stores"
+    },
+    {
+      "type": "alerts",
+      "position": "top"
     }
   ],
   "sections": [

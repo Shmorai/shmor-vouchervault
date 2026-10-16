@@ -74,6 +74,7 @@ for (const [id, s] of Object.entries(DATA.stores)) {
     blocks: [
       { type: 'storeinfo', store: id, position: 'top' },
       { type: 'offers', position: 'top', preset: { store: id }, tabs: true, title: `${s.name} codes & offers`, intro: `Every offer below was checked on ${site}. Tap a code to reveal and copy it.` },
+      { type: 'alerts', position: 'top', store: id },
     ],
     sections: [
       { h2: `How to use a ${s.name} ${uk ? 'discount code' : 'promo code'}`, html: `<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href="${s.url}" rel="nofollow noopener" target="_blank">${site}</a>, add the items you want to your ${uk ? 'basket' : 'cart'} and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>` },
@@ -93,4 +94,26 @@ for (const f of fs.readdirSync(DIR)) {
   const p = JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8'));
   if (p.generated) { fs.unlinkSync(path.join(DIR, f)); console.log(`  removed store page ${f}`); }
 }
-console.log(`✓ ${wanted.size} store pages in content/stores/`);
+// RSS feed of live offers (newest check first) at /feeds/codes.xml. A mailing-list provider's
+// RSS-to-email campaign can send new codes to Code Alerts subscribers automatically.
+{
+  const SITE = JSON.parse(fs.readFileSync(path.join(ROOT, 'shmor-site.json'), 'utf8'));
+  const BASE = `https://${SITE.subdomain}.shmor.ai`;
+  const x = v => String(v ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const items = blocks._live().slice()
+    .sort((p, q) => q.verified.localeCompare(p.verified) || (p.expires || '9').localeCompare(q.expires || '9')).slice(0, 50)
+    .map(o => {
+      const st = DATA.stores[o.store];
+      const desc = `${o.code ? `Code: ${o.code}. ` : ''}${o.terms}${o.expires ? ` Ends ${blocks._fmt(o.expires)}.` : ''}`;
+      return `<item><title>${x(`${st.name}: ${o.title}`)}</title><link>${BASE}/stores/${o.store}/#o-${o.id}</link><guid isPermaLink="false">${x(o.id)}-${o.verified}</guid><pubDate>${new Date(o.verified + 'T08:00:00Z').toUTCString()}</pubDate><category>${x(st.category)}</category><description>${x(desc)}</description></item>`;
+    });
+  fs.mkdirSync(path.join(ROOT, 'feeds'), { recursive: true });
+  fs.writeFileSync(path.join(ROOT, 'feeds', 'codes.xml'), `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>VoucherVault: latest voucher codes</title><link>${BASE}/voucher-codes/</link><description>New and updated voucher codes and offers, checked on the brands' own sites.</description><language>en</language>
+<atom:link href="${BASE}/feeds/codes.xml" rel="self" type="application/rss+xml"/>
+${items.join('\n')}
+</channel></rss>
+`);
+}
+console.log(`✓ ${wanted.size} store pages in content/stores/ + feeds/codes.xml`);

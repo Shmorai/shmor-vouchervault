@@ -80,7 +80,7 @@ function card(o, p, kit) {
     ? `<button type="button" class="vc-btn vc-get" data-reveal="${esc(o.id)}"><span class="vc-btn-label">Get code</span><span class="vc-peek" aria-hidden="true">${esc(o.code.slice(-3))}</span></button>`
     : `<a class="vc-btn vc-deal" href="${esc(offerHref)}" ${rel} data-out="${esc(o.id)}">Get ${o.kind === 'member' ? 'offer' : o.kind === 'gift' ? 'gift' : 'deal'}</a>`;
   return `<article class="vc vc-${esc(o.kind)}" id="o-${esc(o.id)}" data-kind="${esc(o.kind)}" data-regions="${esc(regions.join(' '))}"${o.expires ? ` data-expires="${o.expires}"` : ` data-checkby="${checkBy(o)}"`}
-  data-store="${esc(s.name)}" data-title="${esc(o.title)}" data-href="${esc(offerHref)}" data-aff="${aff ? 1 : 0}"${o.code ? ` data-code="${esc(o.code)}"` : ''}>
+  data-store="${esc(s.name)}" data-store-id="${esc(o.store)}" data-title="${esc(o.title)}" data-href="${esc(offerHref)}" data-aff="${aff ? 1 : 0}"${o.code ? ` data-code="${esc(o.code)}"` : ''}>
   ${onStore ? logo(s, o.store, kit, 'span') : logo(s, o.store, kit)}
   <div class="vc-val"><strong>${esc(o.value)}</strong>${valueLabel(o) ? `<span>${esc(valueLabel(o))}</span>` : ''}</div>
   <div class="vc-body">
@@ -91,6 +91,18 @@ function card(o, p, kit) {
   </div>
   <div class="vc-cta">${cta}</div>
 </article>`;
+}
+
+// Email sign-up form shared by the alerts block (the footer band in templates/layout.html uses the same markup)
+let formN = 0;
+function signupForm(kit, { placement, store, compact }) {
+  const { esc } = kit, n = ++formN;
+  return `<form class="nl-form${compact ? ' nl-compact' : ''}" data-newsletter data-placement="${esc(placement)}" action="" method="post" target="_blank" novalidate>
+    ${store ? `<input type="hidden" name="store" value="${esc(store)}">` : ''}
+    <div class="nl-row"><label class="sr" for="nl-email-${n}">Email address</label><input id="nl-email-${n}" type="email" name="email" placeholder="you@example.com" autocomplete="email" required><button type="submit">Get alerts</button></div>
+    <label class="nl-consent"><input type="checkbox" name="consent" required><span>Email me VoucherVault code alerts. I can unsubscribe at any time. <a href="https://shmor.ai/privacy/">Privacy policy</a>.</span></label>
+    <p class="nl-msg" data-newsletter-msg role="status" hidden></p>
+  </form>`;
 }
 
 function pick(b) {
@@ -170,6 +182,20 @@ module.exports = {
     const last = list.map(o => o.verified).sort().pop();
     const items = [[list.length, 'live offers'], [codes, 'codes to copy'], [stores.size, 'global brands'], [last ? fmtShort(last) : '–', 'last checked']];
     return `<section class="stats" aria-label="VoucherVault at a glance"><div class="wrap"><ul>${items.map(([n, l]) => `<li><b>${kit.esc(String(n))}</b><span>${l}</span></li>`).join('')}</ul></div></section>`;
+  },
+
+  // Inline "Code Alerts" email sign-up (assets/site.js saves it). { store?, title?, text?, placement? }
+  alerts(b, p, kit) {
+    const { esc } = kit;
+    const s = b.store && DATA.stores[b.store];
+    const title = b.title || (s ? `Get ${s.name} code alerts` : 'Get new codes by email');
+    const text = b.text || (s ? `We'll email you when we find a new ${s.name} code or one is about to end. Free, no spam, unsubscribe any time.`
+      : 'A free weekly email with the newest codes, offers ending soon and big sale dates. Unsubscribe any time.');
+    return `<section class="blocks blocks-alerts"><div class="wrap"><div class="al">
+  <span class="al-ico" aria-hidden="true">${svg(P('M10.268 21a2 2 0 0 0 3.464 0') + P('M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326'), 26)}</span>
+  <div class="al-copy"><h2>${esc(title)}</h2><p>${esc(text)}</p></div>
+  ${signupForm(kit, { placement: b.placement || (s ? 'store' : (p.slug || 'home').split('/')[0]), store: b.store, compact: true })}
+</div></div></section>`;
   },
 
   storeinfo(b, p, kit) {

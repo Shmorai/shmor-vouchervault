@@ -19,6 +19,12 @@
       "type": "events",
       "position": "top",
       "title": "Key sale dates"
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "title": "Get Black Friday codes by email",
+      "text": "We’ll email you as brands publish their Black Friday and Cyber Monday codes, plus a reminder before the big days. Free, unsubscribe any time."
     }
   ],
   "sections": [

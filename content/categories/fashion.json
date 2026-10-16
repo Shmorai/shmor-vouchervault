@@ -29,6 +29,10 @@
       "class": "band",
       "category": "fashion",
       "title": "Fashion stores"
+    },
+    {
+      "type": "alerts",
+      "position": "top"
     }
   ],
   "sections": [

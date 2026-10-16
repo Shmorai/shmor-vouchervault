@@ -21,6 +21,10 @@
       "tabs": true,
       "title": "Live codes & offers",
       "intro": "Codes first, then deals, free gifts and member perks."
+    },
+    {
+      "type": "alerts",
+      "position": "top"
     }
   ],
   "sections": [

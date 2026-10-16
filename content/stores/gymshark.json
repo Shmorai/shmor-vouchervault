@@ -30,6 +30,11 @@
       "tabs": true,
       "title": "Gymshark codes & offers",
       "intro": "Every offer below was checked on gymshark.com. Tap a code to reveal and copy it."
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "store": "gymshark"
     }
   ],
   "sections": [

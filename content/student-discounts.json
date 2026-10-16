@@ -22,6 +22,12 @@
         "group": "student"
       },
       "title": "Student offers"
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "title": "Get student discounts by email",
+      "text": "New student offers from the brands you love, once a week. Free, unsubscribe any time."
     }
   ],
   "sections": [

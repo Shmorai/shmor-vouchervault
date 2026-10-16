@@ -64,6 +64,10 @@
       }
     },
     {
+      "type": "alerts",
+      "position": "top"
+    },
+    {
       "type": "stores",
       "position": "top",
       "title": "Popular stores",

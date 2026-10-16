@@ -30,6 +30,11 @@
       "tabs": true,
       "title": "UNIQLO codes & offers",
       "intro": "Every offer below was checked on uniqlo.com. Tap a code to reveal and copy it."
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "store": "uniqlo"
     }
   ],
   "sections": [

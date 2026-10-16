@@ -18,6 +18,10 @@
       "type": "stores",
       "position": "top",
       "az": true
+    },
+    {
+      "type": "alerts",
+      "position": "top"
     }
   ],
   "related": [

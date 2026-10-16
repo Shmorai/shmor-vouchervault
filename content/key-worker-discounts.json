@@ -47,6 +47,10 @@
         "group": "senior"
       },
       "title": "Seniors"
+    },
+    {
+      "type": "alerts",
+      "position": "top"
     }
   ],
   "sections": [

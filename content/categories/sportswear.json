@@ -29,6 +29,10 @@
       "class": "band",
       "category": "sportswear",
       "title": "Sportswear stores"
+    },
+    {
+      "type": "alerts",
+      "position": "top"
     }
   ],
   "sections": [

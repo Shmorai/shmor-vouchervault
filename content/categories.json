@@ -35,6 +35,10 @@
           "title": "Beauty"
         }
       ]
+    },
+    {
+      "type": "alerts",
+      "position": "top"
     }
   ],
   "related": [

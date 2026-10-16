@@ -30,6 +30,11 @@
       "tabs": true,
       "title": "The North Face codes & offers",
       "intro": "Every offer below was checked on thenorthface.com. Tap a code to reveal and copy it."
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "store": "the-north-face"
     }
   ],
   "sections": [

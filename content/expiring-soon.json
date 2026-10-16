@@ -24,6 +24,12 @@
       },
       "sort": "expiry",
       "empty": "Nothing with a published end date right now. See <a href=\"/hot-deals/\">hot deals</a> instead."
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "title": "Get ending-soon alerts",
+      "text": "A weekly heads-up on codes and gifts that are about to end. Free, unsubscribe any time."
     }
   ],
   "sections": [
