@@ -1,0 +1,53 @@
+{
+  "slug": "categories/beauty",
+  "nav": "Beauty",
+  "title": "Beauty Discount Codes: LOOKFANTASTIC, Sephora | VoucherVault",
+  "description": "Live beauty discount codes and free gifts from LOOKFANTASTIC and Sephora: codes on selected skincare, gift-with-purchase offers and free sample bags.",
+  "eyebrow": "Category",
+  "h1": "Beauty discount codes & free gifts",
+  "intro": "Skincare, make-up, haircare and fragrance codes, plus the gift-with-purchase offers that beauty retailers run every week.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796",
+    "alt": "Assorted cosmetics and make-up products",
+    "credit": "Jazmin Quaynor",
+    "creditUrl": "https://unsplash.com/@jazminantoinette"
+  },
+  "search": false,
+  "blocks": [
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "category": "beauty"
+      },
+      "tabs": true,
+      "title": "Beauty codes & gifts"
+    },
+    {
+      "type": "stores",
+      "position": "top",
+      "class": "band",
+      "category": "beauty",
+      "title": "Beauty stores"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "Getting the most from beauty offers",
+      "html": "<ul><li><strong>Gift with purchase</strong> offers are added in the basket automatically while stocks last, so buy early in the offer.</li><li>Check whether a minimum spend is measured before or after discount (LOOKFANTASTIC says \"after discount\" on many of its gifts).</li><li>App-exclusive offers only work in the retailer's app.</li></ul>"
+    }
+  ],
+  "related": [
+    "stores/lookfantastic",
+    "stores/sephora",
+    "expiring-soon"
+  ],
+  "keywords": [
+    "beauty discount codes",
+    "skincare discount code",
+    "makeup promo code",
+    "free gift with purchase"
+  ],
+  "cardText": "LOOKFANTASTIC, Sephora and more.",
+  "updated": "2026-10-16"
+}

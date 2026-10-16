@@ -1,0 +1,44 @@
+{
+  "slug": "blog/singles-day-11-11-explained",
+  "type": "post",
+  "date": "2026-10-15",
+  "updated": "2026-10-15",
+  "eyebrow": "Saving advice",
+  "cardText": "Singles' Day falls on 11 November.",
+  "title": "Singles' Day 11.11 Explained: The Global Sale | VoucherVault",
+  "description": "Singles' Day falls on 11 November. Where the 11.11 sale came from, which shops join in outside China, and how to shop it safely from the US, UK and Europe.",
+  "h1": "Singles' Day (11.11) explained",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1760565030346-4b947220fe3a",
+    "alt": "A hand holding colourful shopping bags",
+    "credit": "Iuliia Pilipeichenko",
+    "creditUrl": "https://unsplash.com/@pilipeichenko"
+  },
+  "intro": "Every year on 11 November, the world's biggest online shopping event takes place, and more and more brands outside China now join in.",
+  "sections": [
+    {
+      "h2": "Where it came from",
+      "html": "<p>Singles' Day started in China in the 1990s as an informal \"bachelors' day\", chosen because 11/11 is a row of ones. Alibaba turned it into a shopping festival in 2009, and it grew into the largest online sales event in the world.</p>"
+    },
+    {
+      "h2": "Who runs 11.11 sales outside China",
+      "html": "<p>AliExpress runs a big 11.11 event every year, and many global fashion, beauty and tech brands now run their own 11.11 promotions as the start of the Black Friday season. When brands publish 11.11 codes on their own sites, we add them here.</p>"
+    },
+    {
+      "h2": "Shopping it safely",
+      "html": "<ul><li><strong>Import costs</strong>: from overseas sellers, check whether VAT, duties or handling fees are included. UK and EU shoppers usually pay VAT at checkout on low-value imports from big marketplaces.</li><li><strong>Delivery times</strong> can be weeks; don't rely on it for gifts.</li><li><strong>Returns</strong> to overseas sellers can be slow and costly; read the policy first.</li><li>Pay with a method that gives buyer protection.</li></ul>"
+    }
+  ],
+  "related": [
+    "black-friday",
+    "expiring-soon",
+    "hot-deals"
+  ],
+  "keywords": [
+    "singles day",
+    "11.11",
+    "singles day sale",
+    "aliexpress 11.11",
+    "double eleven"
+  ]
+}

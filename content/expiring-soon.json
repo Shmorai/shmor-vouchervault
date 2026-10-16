@@ -1,0 +1,48 @@
+{
+  "slug": "expiring-soon",
+  "navOrder": 3,
+  "nav": "Ending soon",
+  "title": "Voucher Codes & Deals Ending Soon | VoucherVault",
+  "description": "Codes, deals and free gifts that end soon, sorted by end date with live countdowns. Grab them before they go: every offer checked on the brand's own site.",
+  "eyebrow": "Last chance",
+  "h1": "Codes & deals ending soon",
+  "intro": "Offers with a published end date, soonest first. Countdowns update live, and offers disappear the moment they end.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1633526543814-9718c8922b7a",
+    "alt": "A wall calendar with red push pins",
+    "credit": "Towfiqu barbhuiya",
+    "creditUrl": "https://unsplash.com/@towfiqu999999"
+  },
+  "search": false,
+  "blocks": [
+    {
+      "type": "offers",
+      "position": "top",
+      "title": "Ending soonest first",
+      "preset": {
+        "expiring": 60
+      },
+      "sort": "expiry",
+      "empty": "Nothing with a published end date right now. See <a href=\"/hot-deals/\">hot deals</a> instead."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "Is an ending-soon deal worth rushing for?",
+      "html": "<p>Only if you were going to buy anyway. Countdown timers are designed to hurry you, and many brands run similar offers again within weeks. Before you buy, check the price you'll actually pay against other stores and the item's usual price.</p><p>The end dates here are the ones the brand publishes. Times are often midnight UK time or the store's local time, so don't leave it to the last minute.</p>"
+    }
+  ],
+  "related": [
+    "hot-deals",
+    "black-friday",
+    "voucher-codes"
+  ],
+  "keywords": [
+    "expiring soon",
+    "ending soon",
+    "last chance deals",
+    "codes ending today"
+  ],
+  "cardText": "Offers with an end date, soonest first.",
+  "updated": "2026-10-16"
+}

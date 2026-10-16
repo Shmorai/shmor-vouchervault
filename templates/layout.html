@@ -3,14 +3,31 @@
 <head>
 {{head}}
 </head>
-<!-- This site's own design. tools/build.js fills each double-brace placeholder: head, nav, main, footer_nav, site_name, year, body_class. -->
+<!-- VoucherVault design. The build fills the double-brace placeholders. Keep the Shmor.ai network link, legal links and affiliate disclosure. -->
 <body class="{{body_class}}">
 <a class="skip" href="#main">Skip to content</a>
+<div class="utility"><div class="wrap"><p><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg> Every code checked on the brand's own site</p><p class="u-hide-sm">Free · no sign-up · no browser extension</p><p class="u-hide-sm"><a href="/how-we-check/">How we check codes</a></p></div></div>
 <header class="site-header">
-  <div class="wrap bar">
-    <a class="brand" href="/">{{site_name}}</a>
-    <nav class="nav" data-nav aria-label="Main">{{nav}}</nav>
-    <button class="menu" data-menu aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <div class="wrap topbar">
+    <a class="logo" href="/" aria-label="VoucherVault home">
+      <svg class="logo-mark" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#E5136F"/><path d="M9 14a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v2.6a3.4 3.4 0 0 0 0 6.8V26a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3v-2.6a3.4 3.4 0 0 0 0-6.8z" fill="#fff"/><path d="M16.5 23.5l7-7" stroke="#E5136F" stroke-width="2.2" stroke-linecap="round"/><circle cx="16.8" cy="16.8" r="1.7" fill="#E5136F"/><circle cx="23.2" cy="23.2" r="1.7" fill="#E5136F"/></svg>
+      <span class="logo-word">Voucher<b>Vault</b></span>
+    </a>
+    <form class="hsearch" action="/search/" role="search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      <input name="q" type="search" placeholder="Search brands & codes" aria-label="Search VoucherVault">
+      <button type="submit">Search</button>
+    </form>
+    <a class="by-shmor" href="https://shmor.ai/">by Shmor.ai</a>
+  </div>
+  <div class="navband">
+    <div class="wrap bar">
+      <nav class="nav" data-nav aria-label="Main">{{nav}}</nav>
+      <div class="region" data-region-switch role="group" aria-label="Choose your region">
+        <button type="button" data-region="all" aria-pressed="true">All</button><button type="button" data-region="us" aria-pressed="false">US</button><button type="button" data-region="uk" aria-pressed="false">UK</button><button type="button" data-region="eu" aria-pressed="false">EU</button>
+      </div>
+      <button class="menu" data-menu aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 <main id="main">
@@ -19,8 +36,12 @@
 <footer class="site-footer">
   <div class="wrap">
     <div class="foot-cols">
-      <div><a class="brand" href="/">{{site_name}}</a><p>Part of the <a href="https://shmor.ai/">Shmor.ai</a> network. Search more. Do less.</p></div>
-      <div><h4>Guides</h4><ul>{{footer_nav}}</ul></div>
+      <div>
+        <a class="logo" href="/"><svg class="logo-mark" width="34" height="34" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="11" fill="#E5136F"/><path d="M9 14a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v2.6a3.4 3.4 0 0 0 0 6.8V26a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3v-2.6a3.4 3.4 0 0 0 0-6.8z" fill="#fff"/><path d="M16.5 23.5l7-7" stroke="#E5136F" stroke-width="2.2" stroke-linecap="round"/><circle cx="16.8" cy="16.8" r="1.7" fill="#E5136F"/><circle cx="23.2" cy="23.2" r="1.7" fill="#E5136F"/></svg><span class="logo-word">Voucher<b>Vault</b></span></a>
+        <p>Live voucher codes and promo codes for global brands, checked on the brands' own sites. Part of the <a href="https://shmor.ai/">Shmor.ai</a> network. Search more. Do less.</p>
+        <p><a href="/how-we-check/">How we check codes</a></p>
+      </div>
+      <div><h4>Browse</h4><ul>{{footer_nav}}</ul></div>
       <div><h4>Shmor.ai</h4><ul>
         <li><a href="https://shmor.ai/">All Shmor marketplaces</a></li>
         <li><a href="https://shmor.ai/about/">About</a></li>
@@ -33,7 +54,7 @@
         <li><a href="https://shmor.ai/affiliate-disclosure/">How we make money</a></li>
       </ul></div>
     </div>
-    <p class="disclosure">{{site_name}} is free to use. Some links are affiliate links: if you book or buy through them we may earn a commission, at no extra cost to you. Prices and availability are set by providers and can change. © {{year}} Shmor.ai</p>
+    <p class="disclosure">{{site_name}} is free to use. Some links are affiliate links: if you buy through them we may earn a commission, at no extra cost to you. Codes and offers are set by the brands, can change or end without notice, and are subject to each store's terms. Brand names belong to their owners; VoucherVault isn't affiliated with or endorsed by them unless stated. © {{year}} Shmor.ai</p>
   </div>
 </footer>
 <script src="/assets/site.js" defer></script>

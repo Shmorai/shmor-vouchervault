@@ -1,0 +1,55 @@
+{
+  "slug": "blog/why-voucher-codes-dont-work",
+  "type": "post",
+  "date": "2026-10-16",
+  "updated": "2026-10-16",
+  "eyebrow": "Saving advice",
+  "cardText": "Code rejected at checkout? The eight most common reasons voucher and promo codes fail, from minimum spends to region locks, and what to try next..",
+  "sources": [
+    {
+      "title": "ASOS (first-order code terms)",
+      "url": "https://www.asos.com/"
+    }
+  ],
+  "title": "Why Voucher Codes Don't Work (and How to Fix It) | VoucherVault",
+  "description": "Code rejected at checkout? The eight most common reasons voucher and promo codes fail, from minimum spends to region locks, and what to try next.",
+  "h1": "Why voucher codes don't work, and how to fix it",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1556742031-c6961e8560b0",
+    "alt": "A bank card going into a payment terminal",
+    "credit": "Clay Banks",
+    "creditUrl": "https://unsplash.com/@claybanks"
+  },
+  "intro": "You paste the code, hit apply, and get \"this code is not valid\". Usually the code is fine; one of its conditions isn't met. Here's the checklist.",
+  "sections": [
+    {
+      "h2": "The eight usual suspects",
+      "html": "<ol><li><strong>Selected items only.</strong> Codes like \"20% off selected\" skip anything not in the promotion, so your total may not move.</li><li><strong>Minimum spend.</strong> Some gifts and codes need a spend before or after discount; check which.</li><li><strong>New customers only.</strong> First-order codes (such as ASOS NEWHERE) check your account and sometimes your address or card.</li><li><strong>App vs website.</strong> Some codes only work in the app (ASOS HEYAPP) or only online.</li><li><strong>Wrong region.</strong> A US code won't work on the UK store and vice versa.</li><li><strong>Can't be combined.</strong> Group discounts (student, military) and sale prices often exclude other codes.</li><li><strong>Typos and spaces.</strong> Copying can add a space; codes may be case sensitive.</li><li><strong>It has ended.</strong> Brands can end codes early, especially when stock runs out.</li></ol>"
+    },
+    {
+      "h2": "What to try next",
+      "html": "<ul><li>Open the offer's terms and check each condition against your basket.</li><li>Remove sale or excluded items and try again.</li><li>Type the code by hand.</li><li>Look for a no-code alternative on the same store: member perks, free shipping thresholds or gifts.</li><li>Ask the store's customer service: they can confirm whether a code is live.</li></ul>"
+    },
+    {
+      "h2": "Why codes on many coupon sites fail",
+      "html": "<p>Some coupon sites list every code they can find, including old, guessed and one-time codes, and leave them up for months. On VoucherVault every offer shows when and where we saw it live, and codes without an end date are hidden automatically if they haven't been re-checked. See <a href=\"/how-we-check/\">how we check codes</a>.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Are promo codes case sensitive?",
+      "a": "Sometimes. Most stores accept any case, but not all, so enter the code exactly as shown."
+    }
+  ],
+  "related": [
+    "how-we-check",
+    "voucher-codes",
+    "blog/how-to-find-voucher-codes-that-work"
+  ],
+  "keywords": [
+    "voucher code not working",
+    "promo code not working",
+    "discount code invalid",
+    "coupon code not working"
+  ]
+}

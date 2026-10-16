@@ -1,0 +1,58 @@
+{
+  "slug": "blog/are-sign-up-discounts-worth-it",
+  "type": "post",
+  "date": "2026-10-14",
+  "updated": "2026-10-14",
+  "eyebrow": "Saving advice",
+  "cardText": "Welcome offers for emails, texts, apps and loyalty schemes often beat public codes.",
+  "sources": [
+    {
+      "title": "Under Armour promo offers",
+      "url": "https://www.underarmour.com/en-us/t/ua-promo-offers.html"
+    },
+    {
+      "title": "Kohl's coupons page",
+      "url": "https://www.kohls.com/feature/coupons.jsp"
+    },
+    {
+      "title": "UNIQLO US",
+      "url": "https://www.uniqlo.com/us/en/"
+    }
+  ],
+  "title": "Are Email & App Sign-Up Discounts Worth It? | VoucherVault",
+  "description": "Welcome offers for emails, texts, apps and loyalty schemes often beat public codes. How they work, big-brand examples, and how to sign up without the spam.",
+  "h1": "Are email and app sign-up discounts worth it?",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1733503747506-773e56e4078f",
+    "alt": "A person in a chair with a laptop and a bank card",
+    "credit": "SumUp",
+    "creditUrl": "https://unsplash.com/@sumup"
+  },
+  "intro": "When a brand has no public code, a welcome offer is often the best deal going. Here's how to use them without drowning in marketing.",
+  "sections": [
+    {
+      "h2": "Typical welcome offers",
+      "html": "<p>Examples we checked on brand sites in October 2026:</p><ul><li><strong>Email or text sign-up</strong>: 15% at Under Armour and Gymshark; 15% off online at Kohl's for joining its texts.</li><li><strong>App</strong>: $10 off for new UNIQLO app members; ASOS's first-order code HEYAPP in its app.</li><li><strong>Loyalty schemes</strong>: 15% off your next purchase for joining The North Face's free XPLR Pass; Nike Members get a birthday-month offer.</li></ul>"
+    },
+    {
+      "h2": "Doing it without the spam",
+      "html": "<ul><li>Use a separate email address or an alias for shopping sign-ups.</li><li>You can unsubscribe at any time: UK and EU data law requires consent for marketing emails, and US law requires an unsubscribe option.</li><li>Text programmes may charge standard message rates; reply STOP to opt out.</li><li>Save the welcome code for your biggest planned order: it's usually single-use.</li></ul>"
+    },
+    {
+      "h2": "When it isn't worth it",
+      "html": "<p>If you're buying one cheap item, a recurring stream of marketing messages may cost you more in impulse buys than the discount saves. And if the brand has a better public code or a student discount you qualify for, use that instead; welcome codes rarely combine with other offers.</p>"
+    }
+  ],
+  "related": [
+    "hot-deals",
+    "blog/how-to-find-voucher-codes-that-work",
+    "stores/uniqlo"
+  ],
+  "keywords": [
+    "sign up discount",
+    "newsletter discount",
+    "first order discount",
+    "app discount",
+    "welcome offer"
+  ]
+}

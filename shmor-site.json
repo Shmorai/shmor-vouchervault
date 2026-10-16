@@ -6,7 +6,7 @@
   "order": 30,
   "status": "building",
   "icon": "tag",
-  "accent": "#F0177A",
+  "accent": "#E5136F",
   "blurb": "Live voucher codes, promo codes and coupons for the world's biggest brands, checked against the brands' own sites, with hot deals, expiring-soon offers and saving advice.",
   "keywords": [
     "voucher",
@@ -62,6 +62,14 @@
     {
       "label": "Today's voucher codes",
       "q": "voucher codes"
+    },
+    {
+      "label": "Student discounts",
+      "q": "student discount"
+    },
+    {
+      "label": "Black Friday 2026",
+      "q": "black friday"
     }
   ],
   "offers": [],
@@ -71,7 +79,25 @@
     "description": "Live voucher codes, promo codes and coupons for the world's biggest brands, checked against the brands' own sites, with hot deals, expiring-soon offers and saving advice.",
     "locale": "en",
     "ogLocale": "en_GB",
-    "themeColor": "#0A0C0E",
-    "searchPlaceholder": "What are you looking for?"
+    "themeColor": "#E5136F",
+    "searchPlaceholder": "Search a brand, e.g. Nike, ASOS, Dell…",
+    "fontsUrl": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap",
+    "ctaTitle": "Find a code for any brand",
+    "logo": "/assets/favicon.svg"
+  },
+  "card": {
+    "image": {
+      "src": "https://images.unsplash.com/photo-1483985988355-763728e1935b",
+      "alt": "A shopper holding paper shopping bags",
+      "credit": "freestocks",
+      "creditUrl": "https://unsplash.com/@freestocks"
+    },
+    "logo": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 40 40\"><rect width=\"40\" height=\"40\" rx=\"11\" fill=\"#E5136F\"/><path d=\"M9 14a3 3 0 0 1 3-3h16a3 3 0 0 1 3 3v2.6a3.4 3.4 0 0 0 0 6.8V26a3 3 0 0 1-3 3H12a3 3 0 0 1-3-3v-2.6a3.4 3.4 0 0 0 0-6.8z\" fill=\"#fff\"/><path d=\"M16.5 23.5l7-7\" stroke=\"#E5136F\" stroke-width=\"2.2\" stroke-linecap=\"round\"/><circle cx=\"16.8\" cy=\"16.8\" r=\"1.7\" fill=\"#E5136F\"/><circle cx=\"23.2\" cy=\"23.2\" r=\"1.7\" fill=\"#E5136F\"/></svg>",
+    "accent": "#E5136F",
+    "wordmark": [
+      "Voucher",
+      "Vault"
+    ],
+    "wordmarkColor": "#E5136F"
   }
 }

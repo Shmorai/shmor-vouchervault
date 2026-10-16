@@ -1,0 +1,53 @@
+{
+  "slug": "categories/sportswear",
+  "nav": "Sportswear",
+  "title": "Sportswear & Trainer Discount Codes: Nike, PUMA | VoucherVault",
+  "description": "Live sportswear and trainer discount codes from Nike, PUMA, Under Armour, Gymshark and The North Face: outlet codes, multi-buys and student discounts.",
+  "eyebrow": "Category",
+  "h1": "Sportswear & trainer discount codes",
+  "intro": "Codes and perks from the big sportswear brands: outlet extras, multi-buy codes, sign-up offers and group discounts.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "alt": "A red running trainer on a red background",
+    "credit": "Ryan Waring",
+    "creditUrl": "https://unsplash.com/@ryanwaring"
+  },
+  "search": false,
+  "blocks": [
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "category": "sportswear"
+      },
+      "tabs": true,
+      "title": "Sportswear codes & offers"
+    },
+    {
+      "type": "stores",
+      "position": "top",
+      "class": "band",
+      "category": "sportswear",
+      "title": "Sportswear stores"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "Saving on trainers and kit",
+      "html": "<ul><li>Big sportswear brands rarely run public sitewide codes; the reliable savings are <strong>member, student, military and key-worker discounts</strong>, verified one by one.</li><li>Codes usually exclude new launches and limited drops.</li><li><strong>Multi-buy codes</strong> (buy 2 or 3) suit kit you'll use anyway, such as socks, tees and training basics.</li></ul>"
+    }
+  ],
+  "related": [
+    "student-discounts",
+    "stores/nike",
+    "stores/puma"
+  ],
+  "keywords": [
+    "sportswear discount codes",
+    "trainer discount codes",
+    "sneaker promo codes",
+    "gym wear discount"
+  ],
+  "cardText": "Nike, PUMA, Under Armour, Gymshark and more.",
+  "updated": "2026-10-16"
+}

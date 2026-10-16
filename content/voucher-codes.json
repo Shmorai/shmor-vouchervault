@@ -1,0 +1,60 @@
+{
+  "slug": "voucher-codes",
+  "navOrder": 1,
+  "nav": "All codes",
+  "title": "All Voucher Codes & Promo Codes Checked Today | VoucherVault",
+  "description": "Every live voucher code, promo code, deal and member perk on VoucherVault, from Nike to LOOKFANTASTIC. Each one checked on the brand's own site and dated.",
+  "eyebrow": "Every live offer",
+  "h1": "All voucher codes & promo codes",
+  "intro": "Every offer we currently list, from copy-and-paste codes to free gifts and member perks. Filter by type, or switch region at the top of the page.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
+    "alt": "Someone shopping online on a laptop with a bank card in hand",
+    "credit": "rupixen",
+    "creditUrl": "https://unsplash.com/@rupixen"
+  },
+  "search": false,
+  "blocks": [
+    {
+      "type": "offers",
+      "position": "top",
+      "tabs": true,
+      "title": "Live codes & offers",
+      "intro": "Codes first, then deals, free gifts and member perks."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "Voucher code, promo code or coupon: what's the difference?",
+      "html": "<p>They are the same thing with different names. In the UK and Europe people usually say <strong>voucher code</strong> or <strong>discount code</strong>; in the US it is a <strong>promo code</strong> or <strong>coupon code</strong>. All of them are words or strings you type into the checkout to get money off, free delivery or a gift.</p><p>We also list offers that need no code: <strong>deals</strong> (price drops or free shipping), <strong>free gifts</strong> added in the basket, and <strong>member perks</strong> such as student, military or sign-up discounts.</p>"
+    },
+    {
+      "h2": "How to use a code",
+      "html": "<ol><li>Tap <strong>Get code</strong> on an offer to reveal and copy it.</li><li>Go to the store, add your items and check they meet the terms (selected items, minimum spend, new customers…).</li><li>Paste the code into the promo or discount box at checkout and make sure the total drops before you pay.</li></ol>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How often are these codes checked?",
+      "a": "Each offer shows the date we last saw it on the brand's site. Codes without an end date are hidden after 10 days unless we re-check them, deals and gifts after 14, and long-running member perks after 45."
+    },
+    {
+      "q": "Can I use more than one code?",
+      "a": "Usually not: most stores allow one code per order, and group discounts (student, military) often can't be combined with promo codes. Check the terms on each offer."
+    }
+  ],
+  "related": [
+    "hot-deals",
+    "expiring-soon",
+    "stores"
+  ],
+  "keywords": [
+    "voucher codes",
+    "promo codes",
+    "discount codes",
+    "coupon codes",
+    "coupons"
+  ],
+  "cardText": "Every live code, deal and perk in one list.",
+  "updated": "2026-10-16"
+}

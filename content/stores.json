@@ -1,0 +1,35 @@
+{
+  "slug": "stores",
+  "navOrder": 4,
+  "nav": "Stores",
+  "title": "All Stores A–Z: Discount Codes by Brand | VoucherVault",
+  "description": "Browse every brand on VoucherVault from A to Z: Nike, ASOS, PUMA, Dell, Lenovo, Samsung, Sephora and more, each with live codes checked on its own site.",
+  "eyebrow": "Brands A–Z",
+  "h1": "All stores A–Z",
+  "intro": "Pick a brand to see its live codes, deals and member perks, plus tips for saving there.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1532453288672-3a27e9be9efd",
+    "alt": "Rails of colourful shirts in a shop",
+    "credit": "Marcus Loke",
+    "creditUrl": "https://unsplash.com/@marcusloke"
+  },
+  "blocks": [
+    {
+      "type": "stores",
+      "position": "top",
+      "az": true
+    }
+  ],
+  "related": [
+    "categories",
+    "voucher-codes"
+  ],
+  "keywords": [
+    "stores",
+    "brands",
+    "discount codes by store",
+    "retailers"
+  ],
+  "cardText": "Every brand we cover, A to Z.",
+  "updated": "2026-10-16"
+}

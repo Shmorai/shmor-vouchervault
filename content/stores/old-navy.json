@@ -1,0 +1,74 @@
+{
+  "generated": true,
+  "slug": "stores/old-navy",
+  "title": "Old Navy Promo Codes & Discount Codes | VoucherVault",
+  "description": "1 live Old Navy offer, checked on oldnavy.gap.com on 16 Oct 2026: Extra 20% off clearance. Terms, end dates and tips. See how to use Old Navy codes and save…",
+  "nav": "Old Navy",
+  "h1": "Old Navy promo codes & offers",
+  "eyebrow": "Fashion · US",
+  "intro": "Old Navy, part of Gap Inc., sells affordable clothing for the whole family. Its site advertises codes such as extra money off clearance in the top banner.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04",
+    "alt": "Clothing boutique with rails of clothes",
+    "credit": "Clark Street Mercantile",
+    "creditUrl": "https://unsplash.com/@mercantile"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "old-navy",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "old-navy"
+      },
+      "tabs": true,
+      "title": "Old Navy codes & offers",
+      "intro": "Every offer below was checked on oldnavy.gap.com. Tap a code to reveal and copy it."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a Old Navy promo code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://oldnavy.gap.com/\" rel=\"nofollow noopener\" target=\"_blank\">oldnavy.gap.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at Old Navy",
+      "html": "<ul><li>Clearance codes stack on already-reduced prices, so the final discount can be big.</li><li>Check the banner for the current code and end date before checkout.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Old Navy discount code right now?",
+      "a": "Yes. As of 16 Oct 2026 we found this code on oldnavy.gap.com: <strong>EXTRA</strong> (extra 20% off clearance). Codes can end without notice, so the store's checkout has the final word."
+    },
+    {
+      "q": "How does VoucherVault check Old Navy codes?",
+      "a": "We only list offers we have seen on Old Navy's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my Old Navy code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/fashion",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "old navy discount code",
+    "old navy promo code",
+    "old navy voucher code",
+    "old navy coupon",
+    "old navy student discount",
+    "old navy offers"
+  ],
+  "cardText": "20% off: Extra 20% off clearance",
+  "updated": "2026-10-16"
+}

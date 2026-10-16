@@ -1,0 +1,78 @@
+{
+  "generated": true,
+  "slug": "stores/dell",
+  "title": "Dell Promo Codes & Discount Codes | VoucherVault",
+  "description": "4 live Dell offers, checked on dell.com on 16 Oct 2026: 10% student & teacher discount. Terms, end dates and tips. See how to use Dell codes and save more.",
+  "nav": "Dell",
+  "h1": "Dell promo codes & offers",
+  "eyebrow": "Tech & laptops · US",
+  "intro": "Dell sells laptops, desktops, monitors and accessories direct. Beyond its weekly deals it offers verified member discounts for students, teachers, the military, medical workers, first responders and seniors.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+    "alt": "A laptop on a wooden table",
+    "credit": "Kari Shea",
+    "creditUrl": "https://unsplash.com/@karishea"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "dell",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "dell"
+      },
+      "tabs": true,
+      "title": "Dell codes & offers",
+      "intro": "Every offer below was checked on dell.com. Tap a code to reveal and copy it."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a Dell promo code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.dell.com/en-us\" rel=\"nofollow noopener\" target=\"_blank\">dell.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at Dell",
+      "html": "<ul><li>Member discounts need you to verify your status with Dell first.</li><li>Dell Rewards is free and gives back credit on future purchases.</li><li>Dell says it will price-match a better online price.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Dell discount code right now?",
+      "a": "We haven't found a public Dell code on dell.com at our last check (16 Oct 2026). There are still 4 offers that need no code, listed above."
+    },
+    {
+      "q": "Does Dell have a student discount?",
+      "a": "Yes: 10% student & teacher discount. High school students 16+, college and trade-school students, K-12 teachers and faculty, after verifying with Dell."
+    },
+    {
+      "q": "How does VoucherVault check Dell codes?",
+      "a": "We only list offers we have seen on Dell's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my Dell code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/tech",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "dell discount code",
+    "dell promo code",
+    "dell voucher code",
+    "dell coupon",
+    "dell student discount",
+    "dell offers"
+  ],
+  "cardText": "10% off: 10% student & teacher discount",
+  "updated": "2026-10-16"
+}

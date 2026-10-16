@@ -1,0 +1,53 @@
+{
+  "slug": "categories/tech",
+  "nav": "Tech",
+  "title": "Tech & Laptop Coupon Codes: Dell, Lenovo, Samsung | VoucherVault",
+  "description": "Live tech and laptop coupons from Dell, Lenovo and Samsung: eCoupons, trade-in offers and student, military and senior discounts, checked on brand sites.",
+  "eyebrow": "Category",
+  "h1": "Tech & laptop coupon codes",
+  "intro": "Laptop eCoupons, phone offers and the education and hero discounts that make the biggest difference on big-ticket tech.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+    "alt": "A laptop on a wooden table",
+    "credit": "Kari Shea",
+    "creditUrl": "https://unsplash.com/@karishea"
+  },
+  "search": false,
+  "blocks": [
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "category": "tech"
+      },
+      "tabs": true,
+      "title": "Tech codes & offers"
+    },
+    {
+      "type": "stores",
+      "position": "top",
+      "class": "band",
+      "category": "tech",
+      "title": "Tech stores"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "Saving on laptops and phones",
+      "html": "<ul><li><strong>Education stores</strong> (Dell, Samsung, Apple, Lenovo) often beat public codes for students and teachers.</li><li>Laptop <strong>eCoupons</strong> are usually tied to one model and limited to one unit.</li><li><strong>Trade-in credit</strong> depends on condition checks after you send the old device in; if it fails them, the credit can be charged back.</li></ul>"
+    }
+  ],
+  "related": [
+    "student-discounts",
+    "stores/dell",
+    "stores/lenovo"
+  ],
+  "keywords": [
+    "tech coupon codes",
+    "laptop coupon",
+    "laptop discount code",
+    "electronics promo codes"
+  ],
+  "cardText": "Dell, Lenovo, Samsung and more.",
+  "updated": "2026-10-16"
+}

@@ -1,0 +1,78 @@
+{
+  "generated": true,
+  "slug": "stores/nike",
+  "title": "Nike Promo Codes & Discount Codes | VoucherVault",
+  "description": "5 live Nike offers, checked on nike.com on 16 Oct 2026: 10% student discount on most Nike items. Terms, end dates and tips.",
+  "nav": "Nike",
+  "h1": "Nike promo codes & offers",
+  "eyebrow": "Sportswear & trainers · US",
+  "intro": "Nike sells trainers, sportswear and kit worldwide through Nike.com and the Nike App. Its best-known savings are member and verified-group discounts rather than public sitewide codes.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "alt": "A red running trainer on a red background",
+    "credit": "Ryan Waring",
+    "creditUrl": "https://unsplash.com/@ryanwaring"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "nike",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "nike"
+      },
+      "tabs": true,
+      "title": "Nike codes & offers",
+      "intro": "Every offer below was checked on nike.com. Tap a code to reveal and copy it."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a Nike promo code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.nike.com/\" rel=\"nofollow noopener\" target=\"_blank\">nike.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at Nike",
+      "html": "<ul><li>Nike's group discounts (students, military, first responders, educators) are verified one by one and issued as single-use codes.</li><li>Join Nike Membership (free) for the birthday-month offer.</li><li>Discount codes usually exclude SNKRS launches, Nike By You and gift cards.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Nike discount code right now?",
+      "a": "We haven't found a public Nike code on nike.com at our last check (16 Oct 2026). There are still 5 offers that need no code, listed above."
+    },
+    {
+      "q": "Does Nike have a student discount?",
+      "a": "Yes: 10% student discount on most Nike items. US students 16+ (high school, college, university), verified through SheerID. Single-use code, expires 2 weeks after issue; new code every 7 days. First $500 of a purchase. Excludes Nike By You, gift cards, select launches. Nike.com and Nike App only."
+    },
+    {
+      "q": "How does VoucherVault check Nike codes?",
+      "a": "We only list offers we have seen on Nike's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my Nike code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/sportswear",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "nike discount code",
+    "nike promo code",
+    "nike voucher code",
+    "nike coupon",
+    "nike student discount",
+    "nike offers"
+  ],
+  "cardText": "10% off: 10% student discount on most Nike items",
+  "updated": "2026-10-16"
+}

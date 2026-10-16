@@ -1,0 +1,74 @@
+{
+  "generated": true,
+  "slug": "stores/lookfantastic",
+  "title": "LOOKFANTASTIC Discount Codes & Voucher Codes | VoucherVault",
+  "description": "8 live LOOKFANTASTIC offers, checked on lookfantastic.com on 16 Oct 2026: 20% off selected beauty with code FLASH. Terms, end dates and tips.",
+  "nav": "LOOKFANTASTIC",
+  "h1": "LOOKFANTASTIC discount codes & offers",
+  "eyebrow": "Beauty · UK",
+  "intro": "LOOKFANTASTIC is a UK-based online beauty retailer selling skincare, haircare, make-up and fragrance. It publishes its current codes and gift-with-purchase offers, with end dates, on its own discount-codes page.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796",
+    "alt": "Assorted cosmetics and make-up products",
+    "credit": "Jazmin Quaynor",
+    "creditUrl": "https://unsplash.com/@jazminantoinette"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "lookfantastic",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "lookfantastic"
+      },
+      "tabs": true,
+      "title": "LOOKFANTASTIC codes & offers",
+      "intro": "Every offer below was checked on lookfantastic.com. Tap a code to reveal and copy it."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a LOOKFANTASTIC discount code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.lookfantastic.com/\" rel=\"nofollow noopener\" target=\"_blank\">lookfantastic.com</a>, add the items you want to your basket and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at LOOKFANTASTIC",
+      "html": "<ul><li>Gift-with-purchase offers are added in the basket automatically while stocks last.</li><li>App-exclusive offers only work in the LOOKFANTASTIC app.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a LOOKFANTASTIC discount code right now?",
+      "a": "Yes. As of 16 Oct 2026 we found this code on lookfantastic.com: <strong>FLASH</strong> (20% off selected beauty with code FLASH). Codes can end without notice, so the store's checkout has the final word."
+    },
+    {
+      "q": "How does VoucherVault check LOOKFANTASTIC codes?",
+      "a": "We only list offers we have seen on LOOKFANTASTIC's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my LOOKFANTASTIC code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/beauty",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "lookfantastic discount code",
+    "lookfantastic promo code",
+    "lookfantastic voucher code",
+    "lookfantastic coupon",
+    "lookfantastic student discount",
+    "lookfantastic offers"
+  ],
+  "cardText": "20% off: 20% off selected beauty with code FLASH",
+  "updated": "2026-10-16"
+}

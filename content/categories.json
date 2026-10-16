@@ -1,0 +1,52 @@
+{
+  "slug": "categories",
+  "navOrder": 5,
+  "nav": "Categories",
+  "title": "Voucher Codes by Category: Fashion, Tech, Beauty | VoucherVault",
+  "description": "Find voucher codes by category: fashion, sportswear and trainers, tech and laptops, and beauty. Live offers from global brands, checked on their own sites.",
+  "eyebrow": "Browse",
+  "h1": "Voucher codes by category",
+  "intro": "Browse live offers by what you're shopping for.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1567401893414-76b7b1e5a7a5",
+    "alt": "Colourful clothes on hangers",
+    "credit": "Burgess Milner",
+    "creditUrl": "https://unsplash.com/@burgessbadass"
+  },
+  "blocks": [
+    {
+      "type": "tiles",
+      "position": "top",
+      "items": [
+        {
+          "slug": "categories/fashion",
+          "title": "Fashion"
+        },
+        {
+          "slug": "categories/sportswear",
+          "title": "Sportswear & trainers"
+        },
+        {
+          "slug": "categories/tech",
+          "title": "Tech & laptops"
+        },
+        {
+          "slug": "categories/beauty",
+          "title": "Beauty"
+        }
+      ]
+    }
+  ],
+  "related": [
+    "stores",
+    "student-discounts"
+  ],
+  "keywords": [
+    "categories",
+    "fashion codes",
+    "tech codes",
+    "beauty codes"
+  ],
+  "cardText": "Fashion, sportswear, tech and beauty.",
+  "updated": "2026-10-16"
+}

@@ -1,0 +1,78 @@
+{
+  "generated": true,
+  "slug": "stores/samsung",
+  "title": "Samsung Promo Codes & Discount Codes | VoucherVault",
+  "description": "2 live Samsung offers, checked on samsung.com on 16 Oct 2026: Galaxy Z Fold8 Ultra: $250 off without trade-in, or up to $800 trade-in credit.",
+  "nav": "Samsung",
+  "h1": "Samsung promo codes & offers",
+  "eyebrow": "Tech & laptops · US",
+  "intro": "Samsung sells Galaxy phones, tablets, TVs and appliances direct. Its offer programmes give extra savings to students, teachers, government, military and corporate employees.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+    "alt": "A laptop on a wooden table",
+    "credit": "Kari Shea",
+    "creditUrl": "https://unsplash.com/@karishea"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "samsung",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "samsung"
+      },
+      "tabs": true,
+      "title": "Samsung codes & offers",
+      "intro": "Every offer below was checked on samsung.com. Tap a code to reveal and copy it."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a Samsung promo code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.samsung.com/us/\" rel=\"nofollow noopener\" target=\"_blank\">samsung.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at Samsung",
+      "html": "<ul><li>Trade-in credit depends on the condition checks Samsung lists.</li><li>Offer-programme prices need a Samsung account and verification.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Samsung discount code right now?",
+      "a": "We haven't found a public Samsung code on samsung.com at our last check (16 Oct 2026). There are still 2 offers that need no code, listed above."
+    },
+    {
+      "q": "Does Samsung have a student discount?",
+      "a": "Yes: up to 30% off with Samsung Offer Programs. For students, teachers, government, military and corporate employees. Samsung.com sign-in and verification required."
+    },
+    {
+      "q": "How does VoucherVault check Samsung codes?",
+      "a": "We only list offers we have seen on Samsung's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my Samsung code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/tech",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "samsung discount code",
+    "samsung promo code",
+    "samsung voucher code",
+    "samsung coupon",
+    "samsung student discount",
+    "samsung offers"
+  ],
+  "cardText": "$250 off: Galaxy Z Fold8 Ultra: $250 off without trade-in, or up to $800 trade-in credit",
+  "updated": "2026-10-16"
+}

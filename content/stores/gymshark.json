@@ -1,0 +1,78 @@
+{
+  "generated": true,
+  "slug": "stores/gymshark",
+  "title": "Gymshark Promo Codes & Discount Codes | VoucherVault",
+  "description": "3 live Gymshark offers, checked on gymshark.com on 16 Oct 2026: 15% off when you sign up for Gymshark emails. Terms, end dates and tips.",
+  "nav": "Gymshark",
+  "h1": "Gymshark promo codes & offers",
+  "eyebrow": "Sportswear & trainers · US",
+  "intro": "Gymshark is a gym-wear brand selling online worldwide. It offers a sign-up discount, a student discount through Student Beans and a refer-a-friend reward.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "alt": "A red running trainer on a red background",
+    "credit": "Ryan Waring",
+    "creditUrl": "https://unsplash.com/@ryanwaring"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "gymshark",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "gymshark"
+      },
+      "tabs": true,
+      "title": "Gymshark codes & offers",
+      "intro": "Every offer below was checked on gymshark.com. Tap a code to reveal and copy it."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a Gymshark promo code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.gymshark.com/\" rel=\"nofollow noopener\" target=\"_blank\">gymshark.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at Gymshark",
+      "html": "<ul><li>Student discounts are verified through Student Beans before you get a code.</li><li>Offers shown here were seen on gymshark.com's US store; other regional stores may differ.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Gymshark discount code right now?",
+      "a": "We haven't found a public Gymshark code on gymshark.com at our last check (16 Oct 2026). There are still 3 offers that need no code, listed above."
+    },
+    {
+      "q": "Does Gymshark have a student discount?",
+      "a": "Yes: students get an extra 12% off with Student Beans. Verify your student status with Student Beans to get the code."
+    },
+    {
+      "q": "How does VoucherVault check Gymshark codes?",
+      "a": "We only list offers we have seen on Gymshark's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my Gymshark code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/sportswear",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "gymshark discount code",
+    "gymshark promo code",
+    "gymshark voucher code",
+    "gymshark coupon",
+    "gymshark student discount",
+    "gymshark offers"
+  ],
+  "cardText": "15% off: 15% off when you sign up for Gymshark emails",
+  "updated": "2026-10-16"
+}

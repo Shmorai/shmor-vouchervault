@@ -1,15 +1,191 @@
 {
   "slug": "",
-  "title": "VoucherVault: Live voucher codes, promo codes and coupons fo",
-  "description": "Live voucher codes, promo codes and coupons for the world's biggest brands, checked against the brands' own sites, with hot deals, expiring-soon offers and saving advice. Free to use, part of the Shmor.ai network.",
-  "eyebrow": "Part of the Shmor.ai network",
-  "h1": "VoucherVault",
-  "intro": "Live voucher codes, promo codes and coupons for the world's biggest brands, checked against the brands' own sites, with hot deals, expiring-soon offers and saving advice.",
-  "related": [],
-  "sections": [
+  "title": "VoucherVault: Live Voucher Codes & Promo Codes for Top Brands",
+  "description": "Live voucher codes, promo codes and coupons for global brands such as Nike, ASOS, PUMA, Dell and Sephora, checked on each brand’s own site. Hot deals too.",
+  "eyebrow": "Checked on the brands' own sites",
+  "h1": "Today's voucher codes for the world's biggest brands",
+  "h1Html": "Today's <em>voucher codes</em> for the world's biggest brands",
+  "intro": "Promo codes, coupons, member perks and free gifts from global brands in the US, UK and Europe. Every offer is checked on the brand's own site, dated, and removed when it ends.",
+  "searchPlaceholder": "Search a brand, e.g. Nike, ASOS, Dell…",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1483985988355-763728e1935b",
+    "alt": "A shopper holding paper shopping bags",
+    "credit": "freestocks",
+    "creditUrl": "https://unsplash.com/@freestocks"
+  },
+  "chips": [
     {
-      "h2": "Why use VoucherVault?",
-      "html": "<p>Live voucher codes, promo codes and coupons for the world's biggest brands, checked against the brands' own sites, with hot deals, expiring-soon offers and saving advice.</p>"
+      "label": "Hot deals",
+      "slug": "hot-deals"
+    },
+    {
+      "label": "Ending soon",
+      "slug": "expiring-soon"
+    },
+    {
+      "label": "Student discounts",
+      "slug": "student-discounts"
+    },
+    {
+      "label": "Black Friday",
+      "slug": "black-friday"
+    },
+    {
+      "label": "All stores",
+      "slug": "stores"
     }
-  ]
+  ],
+  "latestPosts": 3,
+  "latestTitle": "Money-saving advice",
+  "blocks": [
+    {
+      "type": "stats",
+      "position": "top"
+    },
+    {
+      "type": "ticker",
+      "position": "top",
+      "days": 21
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "class": "band",
+      "title": "Hot codes today",
+      "intro": "The strongest codes we've found on the brands' own sites right now.",
+      "preset": {
+        "hot": true
+      },
+      "limit": 8,
+      "layout": "grid",
+      "more": {
+        "title": "All hot deals",
+        "slug": "hot-deals"
+      }
+    },
+    {
+      "type": "stores",
+      "position": "top",
+      "title": "Popular stores",
+      "intro": "Tap a brand to see every live code, deal and member perk.",
+      "limit": 12,
+      "more": {
+        "title": "All stores A–Z",
+        "slug": "stores"
+      }
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "class": "band",
+      "title": "Ending soon",
+      "intro": "Offers with a published end date, soonest first. Countdowns update live.",
+      "preset": {
+        "expiring": 31
+      },
+      "sort": "expiry",
+      "limit": 5,
+      "more": {
+        "title": "Everything ending soon",
+        "slug": "expiring-soon"
+      }
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "title": "Latest voucher codes",
+      "intro": "Copy-and-paste codes, newest checks first.",
+      "preset": {
+        "kind": "code"
+      },
+      "limit": 8,
+      "more": {
+        "title": "All codes & offers",
+        "slug": "voucher-codes"
+      }
+    },
+    {
+      "type": "tiles",
+      "position": "top",
+      "class": "band",
+      "title": "Shop by category",
+      "items": [
+        {
+          "slug": "categories/fashion",
+          "title": "Fashion",
+          "text": "ASOS, Old Navy, Kohl's, UNIQLO"
+        },
+        {
+          "slug": "categories/sportswear",
+          "title": "Sportswear & trainers",
+          "text": "Nike, PUMA, Under Armour, Gymshark"
+        },
+        {
+          "slug": "categories/tech",
+          "title": "Tech & laptops",
+          "text": "Dell, Lenovo, Samsung"
+        },
+        {
+          "slug": "categories/beauty",
+          "title": "Beauty",
+          "text": "LOOKFANTASTIC, Sephora"
+        }
+      ]
+    },
+    {
+      "type": "events",
+      "title": "Big sale dates coming up",
+      "intro": "Plan ahead: these are the dates when most brands launch their biggest offers. <a href=\"/black-friday/\">Black Friday guide →</a>"
+    },
+    {
+      "type": "steps",
+      "title": "How we check every code",
+      "items": [
+        {
+          "icon": "search",
+          "title": "Found at the source",
+          "text": "We take offers from the brand's own site, app or official affiliate feed, never by copying other coupon sites."
+        },
+        {
+          "icon": "calendar",
+          "title": "Dated and sourced",
+          "text": "Each offer shows the day we saw it live and a link to where we saw it."
+        },
+        {
+          "icon": "clock",
+          "title": "Removed when it ends",
+          "text": "Offers vanish on their end date. Ones without a date are hidden if we haven't re-checked them recently."
+        },
+        {
+          "icon": "shield",
+          "title": "No sign-up, no tricks",
+          "text": "Free to use, no account, no browser extension. Some links may earn us a commission, at no cost to you."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Are the codes on VoucherVault real?",
+      "a": "Yes. We only list codes and offers we have seen on the brand's own website or app (or that the brand supplies through its official affiliate programme), and every one shows the date we checked it plus a link to the source. If an offer has no end date and we haven't re-checked it recently, it is hidden automatically."
+    },
+    {
+      "q": "Why doesn't a code work for me?",
+      "a": "Most codes have conditions: selected items only, a minimum spend, new customers only, app only, or one region only. Open the offer's terms and check your basket meets them. Read our guide: <a href=\"/blog/why-voucher-codes-dont-work/\">why voucher codes don't work</a>."
+    },
+    {
+      "q": "Do I need an account or a browser extension?",
+      "a": "No. VoucherVault is free, needs no sign-up and has no browser extension. Tap <strong>Get code</strong>, copy it and paste it at the store's checkout."
+    },
+    {
+      "q": "Which countries do you cover?",
+      "a": "Global brands for shoppers in the US, UK and Europe. Each offer shows the region it works in, and you can switch region at the top of the page."
+    },
+    {
+      "q": "How does VoucherVault make money?",
+      "a": "Some links to stores are affiliate links: if you buy through them, the store may pay us a commission. It never changes the price you pay or which codes we show. See <a href=\"https://shmor.ai/affiliate-disclosure/\">how we make money</a>."
+    }
+  ],
+  "ctaTitle": "Find a code for any brand",
+  "updated": "2026-10-16"
 }

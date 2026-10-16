@@ -1,0 +1,74 @@
+{
+  "generated": true,
+  "slug": "stores/kohls",
+  "title": "Kohl's Promo Codes & Discount Codes | VoucherVault",
+  "description": "2 live Kohl's offers, checked on kohls.com on 16 Oct 2026: 20% off coupon-eligible items. Terms, end dates and tips. See how to use Kohl's codes and save…",
+  "nav": "Kohl's",
+  "h1": "Kohl's promo codes & offers",
+  "eyebrow": "Fashion · US",
+  "intro": "Kohl's is a US department store selling clothing, home and beauty. It is known for coupon codes on 'coupon-eligible' items and a text sign-up discount.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1441984904996-e0b6ba687e04",
+    "alt": "Clothing boutique with rails of clothes",
+    "credit": "Clark Street Mercantile",
+    "creditUrl": "https://unsplash.com/@mercantile"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "kohls",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "kohls"
+      },
+      "tabs": true,
+      "title": "Kohl's codes & offers",
+      "intro": "Every offer below was checked on kohls.com. Tap a code to reveal and copy it."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a Kohl's promo code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.kohls.com/\" rel=\"nofollow noopener\" target=\"_blank\">kohls.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at Kohl's",
+      "html": "<ul><li>Codes only apply to items marked coupon-eligible; many brands are excluded.</li><li>Kohl's shows the price with the code applied on eligible product listings.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Kohl's discount code right now?",
+      "a": "Yes. As of 16 Oct 2026 we found this code on kohls.com: <strong>GET20</strong> (20% off coupon-eligible items). Codes can end without notice, so the store's checkout has the final word."
+    },
+    {
+      "q": "How does VoucherVault check Kohl's codes?",
+      "a": "We only list offers we have seen on Kohl's's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my Kohl's code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/fashion",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "kohl's discount code",
+    "kohl's promo code",
+    "kohl's voucher code",
+    "kohl's coupon",
+    "kohl's student discount",
+    "kohl's offers"
+  ],
+  "cardText": "20% off: 20% off coupon-eligible items",
+  "updated": "2026-10-16"
+}

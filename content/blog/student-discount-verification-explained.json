@@ -1,0 +1,59 @@
+{
+  "slug": "blog/student-discount-verification-explained",
+  "type": "post",
+  "date": "2026-10-15",
+  "updated": "2026-10-15",
+  "eyebrow": "Saving advice",
+  "cardText": "UNiDAYS, Student Beans, SheerID, ID.me and ISIC: how student discount verification works, who can use it in the US, UK and Europe, and how to get the code..",
+  "sources": [
+    {
+      "title": "Nike: student discount help",
+      "url": "https://www.nike.com/help/a/student-discount"
+    },
+    {
+      "title": "Dell: member discounts FAQ",
+      "url": "https://www.dell.com/en-us/shop/member/lp/dell-coupons-codes"
+    },
+    {
+      "title": "Gymshark: Student Beans",
+      "url": "https://www.gymshark.com/pages/studentbeans"
+    }
+  ],
+  "title": "Student Discount Verification Explained | VoucherVault",
+  "description": "UNiDAYS, Student Beans, SheerID, ID.me and ISIC: how student discount verification works, who can use it in the US, UK and Europe, and how to get the code.",
+  "h1": "Student discount verification explained",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1663162550938-60f70fab5d31",
+    "alt": "Students walking along a path",
+    "credit": "Meredith Spencer",
+    "creditUrl": "https://unsplash.com/@meredithspencer22"
+  },
+  "intro": "To get most student discounts you have to prove you're a student once, through a verification service. Here's how the main ones work.",
+  "sections": [
+    {
+      "h2": "The main services",
+      "html": "<ul><li><strong>UNiDAYS</strong>: a free app and website. You verify with your school or university login or documents, then get codes or links for partner brands.</li><li><strong>Student Beans</strong>: similar and free; Gymshark, for example, verifies students through it.</li><li><strong>SheerID</strong>: runs inside the brand's own checkout. Nike's US student discount uses it and may ask for documents.</li><li><strong>ID.me</strong>: a US digital identity service used for student, military, first responder and teacher discounts.</li><li><strong>ISIC</strong>: the International Student Identity Card, a paid card recognised in many countries; in the UK the paid TOTUM card is another option.</li></ul>"
+    },
+    {
+      "h2": "Who qualifies",
+      "html": "<p>It depends on the brand. Nike's US student offer covers high school, college and university students aged 16+. Dell's includes high school students 16+ and trade-school students. Many fashion brands only accept college or university students. Check the terms before you verify.</p>"
+    },
+    {
+      "h2": "Tips",
+      "html": "<ul><li>Use your school or university email if you have one; it's usually the quickest route.</li><li>Codes are often single-use and short-lived (Nike's expire two weeks after issue), so verify when you're ready to buy.</li><li>Your status usually needs renewing each year.</li><li>Only verify on the brand's own site or the service's official app, never through a link in an unexpected message.</li></ul>"
+    }
+  ],
+  "related": [
+    "student-discounts",
+    "stores/nike",
+    "stores/gymshark"
+  ],
+  "keywords": [
+    "student discount verification",
+    "unidays",
+    "student beans",
+    "sheerid",
+    "id.me student",
+    "isic card"
+  ]
+}

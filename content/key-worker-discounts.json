@@ -1,0 +1,74 @@
+{
+  "slug": "key-worker-discounts",
+  "nav": "Military & key workers",
+  "title": "Military, Teacher & Key Worker Discounts | VoucherVault",
+  "description": "Discounts for military, veterans, first responders, healthcare workers, teachers and seniors from Nike, Under Armour, Dell and Samsung, and how to verify.",
+  "eyebrow": "Heroes & key workers",
+  "h1": "Military, teacher & key worker discounts",
+  "intro": "Thank-you discounts for people who serve. Here is every one we list, who qualifies and how you verify.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1509017174183-0b7e0278f1ec",
+    "alt": "A person holding a smartphone",
+    "credit": "Jonas Leupe",
+    "creditUrl": "https://unsplash.com/@jonasleupe"
+  },
+  "search": false,
+  "blocks": [
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "group": "military"
+      },
+      "title": "Military & veterans"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "class": "band",
+      "preset": {
+        "group": "keyworker"
+      },
+      "title": "First responders & healthcare workers"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "group": "teacher"
+      },
+      "title": "Teachers & educators"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "class": "band",
+      "preset": {
+        "group": "senior"
+      },
+      "title": "Seniors"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How verification works",
+      "html": "<p>In the US most brands verify through <strong>ID.me</strong> or <strong>SheerID</strong>: you prove your status once (with documents or an official login) and the discount is applied at checkout or sent as a code. In the UK, schemes such as the Defence Discount Service, Blue Light Card and Health Service Discounts collect discounts for the armed forces, emergency services and NHS staff; each has its own eligibility rules.</p><p>Group discounts usually can't be combined with promo codes, so compare which gives the lower total.</p>"
+    }
+  ],
+  "related": [
+    "student-discounts",
+    "stores/under-armour",
+    "stores/dell"
+  ],
+  "keywords": [
+    "military discount",
+    "veteran discount",
+    "first responder discount",
+    "teacher discount",
+    "nurse discount",
+    "senior discount",
+    "key worker discount"
+  ],
+  "cardText": "Military, first responder, teacher and senior offers.",
+  "updated": "2026-10-16"
+}

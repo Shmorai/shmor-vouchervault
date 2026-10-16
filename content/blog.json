@@ -1,0 +1,19 @@
+{
+  "slug": "blog",
+  "type": "blog",
+  "navOrder": 8,
+  "nav": "Saving advice",
+  "title": "Money-Saving Advice & Shopping Guides | VoucherVault",
+  "description": "Practical money-saving advice from VoucherVault: why codes fail, how to find codes that work, student verification, sign-up discounts and big sale dates.",
+  "eyebrow": "Saving advice",
+  "h1": "Money-saving advice",
+  "intro": "Short, practical guides to paying less online, written for shoppers in the US, UK and Europe.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1513885535751-8b9238bd345a",
+    "alt": "Wrapped gift boxes",
+    "credit": "freestocks",
+    "creditUrl": "https://unsplash.com/@freestocks"
+  },
+  "listTitle": "Latest guides",
+  "updated": "2026-10-16"
+}

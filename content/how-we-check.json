@@ -1,0 +1,49 @@
+{
+  "slug": "how-we-check",
+  "nav": "How we check codes",
+  "title": "How We Find and Check Voucher Codes | VoucherVault",
+  "description": "How VoucherVault finds, checks, dates and removes voucher codes: brand sources only, a dated check on every offer, automatic expiry, and how we make money.",
+  "eyebrow": "Editorial standards",
+  "h1": "How we find and check codes",
+  "intro": "Coupon sites are full of codes that never worked. Here's exactly how we keep VoucherVault different.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1542744095-291d1f67b221",
+    "alt": "A person working on a laptop",
+    "credit": "Campaign Creators",
+    "creditUrl": "https://unsplash.com/@campaign_creators"
+  },
+  "search": false,
+  "sections": [
+    {
+      "h2": "Where our offers come from",
+      "html": "<ul><li><strong>The brand's own site or app</strong>: promo banners, official discount-code pages and checkout offers.</li><li><strong>Official affiliate feeds</strong>: once we join a brand's affiliate programme (through networks like Awin, CJ or Impact), the brand sends us its current codes directly.</li><li>We <strong>don't copy codes from other coupon sites</strong>: they are often expired, guessed or fake, and the listings belong to them.</li></ul>"
+    },
+    {
+      "h2": "What every offer shows",
+      "html": "<ul><li>The <strong>date we last saw it live</strong> and a link to where we saw it.</li><li>The <strong>end date</strong>, if the brand publishes one.</li><li>The <strong>region</strong> it works in (US, UK or EU) and the key terms.</li></ul>"
+    },
+    {
+      "h2": "When offers are removed",
+      "html": "<p>Offers with an end date disappear when it passes, both when we rebuild the site and live in your browser. Offers without an end date are hidden automatically if we haven't re-checked them within a set time: 10 days for codes, 14 for deals and gifts, 45 for long-running member perks.</p>"
+    },
+    {
+      "h2": "What we don't do",
+      "html": "<ul><li>No invented \"verified by 1,000 users\" counters, success rates or fake reviews.</li><li>No browser extension and no account.</li><li>No pop-up tricks that open the store in new tabs without asking.</li></ul>"
+    },
+    {
+      "h2": "How we make money",
+      "html": "<p>Some store links are affiliate links: if you buy through them, the store may pay us a commission. That never changes your price or which offers we list. Read the network-wide <a href=\"https://shmor.ai/affiliate-disclosure/\">affiliate disclosure</a>.</p>"
+    }
+  ],
+  "related": [
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "how we check codes",
+    "verified codes",
+    "editorial standards"
+  ],
+  "cardText": "Our sources, checks and how we make money.",
+  "updated": "2026-10-16"
+}

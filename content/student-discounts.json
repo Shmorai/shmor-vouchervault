@@ -1,0 +1,57 @@
+{
+  "slug": "student-discounts",
+  "navOrder": 6,
+  "nav": "Student",
+  "title": "Student Discounts at Nike, Dell, Samsung & More | VoucherVault",
+  "description": "Student discounts from global brands: Nike 10%, Dell 10%, Samsung up to 30%, Gymshark extra 12% and more, plus how SheerID and Student Beans verify you.",
+  "eyebrow": "Students",
+  "h1": "Student discounts from global brands",
+  "intro": "Verified student discounts often beat public codes. Here is every student offer we list, and how to get each one.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef",
+    "alt": "An open laptop on a wooden study desk",
+    "credit": "Howard Bouchevereau",
+    "creditUrl": "https://unsplash.com/@howardbouchevereau"
+  },
+  "search": false,
+  "blocks": [
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "group": "student"
+      },
+      "title": "Student offers"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How student verification works",
+      "html": "<p>Brands don't check your student status themselves. They use a verification service, and you sign in or upload proof once:</p><ul><li><strong>UNiDAYS</strong> and <strong>Student Beans</strong>: free student-discount apps used by many fashion and lifestyle brands (Gymshark uses Student Beans).</li><li><strong>SheerID</strong>: verification built into the brand's own checkout (Nike uses it in the US).</li><li><strong>ID.me</strong>: a US identity service used for student, military and key-worker discounts.</li></ul><p>More detail in our guide: <a href=\"/blog/student-discount-verification-explained/\">student discount verification explained</a>.</p>"
+    },
+    {
+      "h2": "Tips",
+      "html": "<ul><li>Student codes are often single-use and expire quickly (Nike's expire two weeks after issue), so generate one when you're ready to buy.</li><li>Education stores for laptops and phones (Dell, Samsung) can save more than any public code.</li><li>Many student discounts can't be combined with other codes.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Can high school students get student discounts?",
+      "a": "Sometimes. Nike's US student discount covers high school, college and university students aged 16+, and Dell includes high school students 16 and older. Others are for college or university students only, so check each offer's terms."
+    }
+  ],
+  "related": [
+    "blog/student-discount-verification-explained",
+    "key-worker-discounts",
+    "categories/tech"
+  ],
+  "keywords": [
+    "student discount",
+    "student discounts",
+    "unidays",
+    "student beans",
+    "student promo code"
+  ],
+  "cardText": "Verified student offers from global brands.",
+  "updated": "2026-10-16"
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "black-friday",
+  "navOrder": 7,
+  "nav": "Black Friday",
+  "title": "Black Friday & Cyber Monday 2026: Dates and Tips | VoucherVault",
+  "description": "Black Friday 2026 is Friday 27 November and Cyber Monday is 30 November. Key sale dates, how to spot a real deal, and your rights to cancel online orders.",
+  "eyebrow": "Sale guide",
+  "h1": "Black Friday & Cyber Monday 2026",
+  "intro": "Black Friday falls on <strong>Friday 27 November 2026</strong>, the day after US Thanksgiving, and Cyber Monday on <strong>Monday 30 November</strong>. Here's how to get real savings, not just countdown timers.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1607083206968-13611e3d76db",
+    "alt": "Sale lettering for a shopping event",
+    "credit": "Tamanna Rumee",
+    "creditUrl": "https://unsplash.com/@tamanna_rumee"
+  },
+  "search": false,
+  "blocks": [
+    {
+      "type": "events",
+      "position": "top",
+      "title": "Key sale dates"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "When do Black Friday deals start?",
+      "html": "<p>The day itself is 27 November 2026, but most big retailers in the US, UK and Europe now start their offers earlier, often a week or more before. Amazon has run multi-day Black Friday events in recent years and announces its own dates. We add brand codes to VoucherVault as soon as we see them on the brands' own sites.</p>"
+    },
+    {
+      "h2": "How to spot a real deal",
+      "html": "<ul><li><strong>Check the price history.</strong> Consumer groups such as Which? have repeatedly found that many \"Black Friday deals\" were the same price or cheaper at other times of year. Price trackers help for big items.</li><li><strong>Ignore the \"was\" price</strong> and compare the price you'd pay at two or three other stores.</li><li><strong>Make a list beforehand</strong> of things you already planned to buy, and set a budget.</li><li><strong>Stack legitimately</strong>: a sale price plus a code plus cashback can all apply if the terms allow.</li></ul>"
+    },
+    {
+      "h2": "Your rights when buying online",
+      "html": "<ul><li><strong>UK</strong>: under the Consumer Contracts Regulations you can usually cancel most online orders within 14 days of delivery for any reason.</li><li><strong>EU</strong>: the 14-day right of withdrawal gives similar protection for online purchases.</li><li><strong>US</strong>: there's no general legal right to return; it depends on the store's policy, and many extend return windows over the holidays. Paying by credit card can add protection.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What date is Black Friday 2026?",
+      "a": "Friday 27 November 2026. US Thanksgiving is Thursday 26 November, and Cyber Monday is Monday 30 November."
+    },
+    {
+      "q": "Is Black Friday the cheapest time to buy?",
+      "a": "Often, but not always. Some items are cheaper in other sales (Prime Day, Boxing Day, January sales or model-year changes for tech). Check price history before you buy."
+    }
+  ],
+  "related": [
+    "expiring-soon",
+    "blog/singles-day-11-11-explained",
+    "hot-deals"
+  ],
+  "keywords": [
+    "black friday",
+    "black friday 2026",
+    "cyber monday",
+    "cyber monday 2026",
+    "black friday dates",
+    "black friday deals"
+  ],
+  "cardText": "Dates, tips and your rights for the biggest sale.",
+  "updated": "2026-10-16"
+}

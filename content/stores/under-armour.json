@@ -1,0 +1,74 @@
+{
+  "generated": true,
+  "slug": "stores/under-armour",
+  "title": "Under Armour Promo Codes & Discount Codes | VoucherVault",
+  "description": "4 live Under Armour offers, checked on underarmour.com on 16 Oct 2026: Extra 25% off select footwear & accessories in UA Outlet. Terms, end dates and tips.",
+  "nav": "Under Armour",
+  "h1": "Under Armour promo codes & offers",
+  "eyebrow": "Sportswear & trainers · US",
+  "intro": "Under Armour makes performance sportswear, trainers and accessories. Its US store runs outlet codes, a sign-up discount and a 20% discount for heroes and teachers verified through ID.me.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
+    "alt": "A red running trainer on a red background",
+    "credit": "Ryan Waring",
+    "creditUrl": "https://unsplash.com/@ryanwaring"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "under-armour",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "under-armour"
+      },
+      "tabs": true,
+      "title": "Under Armour codes & offers",
+      "intro": "Every offer below was checked on underarmour.com. Tap a code to reveal and copy it."
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a Under Armour promo code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong> to reveal and copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.underarmour.com/en-us/\" rel=\"nofollow noopener\" target=\"_blank\">underarmour.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at Under Armour",
+      "html": "<ul><li>The ID.me discount can't be combined with promo codes, so compare which saves more.</li><li>Outlet codes such as EXTRA25 apply to selected outlet lines only.</li><li>Standard shipping is free over the threshold shown on the site.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a Under Armour discount code right now?",
+      "a": "Yes. As of 16 Oct 2026 we found this code on underarmour.com: <strong>EXTRA25</strong> (extra 25% off select footwear & accessories in UA Outlet). Codes can end without notice, so the store's checkout has the final word."
+    },
+    {
+      "q": "How does VoucherVault check Under Armour codes?",
+      "a": "We only list offers we have seen on Under Armour's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my Under Armour code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/sportswear",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "under armour discount code",
+    "under armour promo code",
+    "under armour voucher code",
+    "under armour coupon",
+    "under armour student discount",
+    "under armour offers"
+  ],
+  "cardText": "25% off: Extra 25% off select footwear & accessories in UA Outlet",
+  "updated": "2026-10-16"
+}

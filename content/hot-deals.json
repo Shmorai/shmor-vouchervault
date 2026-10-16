@@ -1,0 +1,57 @@
+{
+  "slug": "hot-deals",
+  "navOrder": 2,
+  "nav": "Hot deals",
+  "title": "Hot Deals & Best Promo Codes Right Now | VoucherVault",
+  "description": "The hottest voucher codes and deals we've found today: extra money off clearance, multi-buy codes and first-order discounts, all checked on brand sites.",
+  "eyebrow": "Hand-picked",
+  "h1": "Hot deals & the best codes right now",
+  "intro": "The strongest offers on VoucherVault today: big percentages, clearance extras and first-order codes. Each one is checked on the brand's own site.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1607082349566-187342175e2f",
+    "alt": "Sale sign with a shopping trolley",
+    "credit": "Tamanna Rumee",
+    "creditUrl": "https://unsplash.com/@tamanna_rumee"
+  },
+  "search": false,
+  "blocks": [
+    {
+      "type": "offers",
+      "position": "top",
+      "title": "Hot right now",
+      "preset": {
+        "hot": true
+      },
+      "layout": "grid"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "class": "band",
+      "title": "Welcome offers for new customers",
+      "intro": "First-order codes and sign-up discounts.",
+      "preset": {
+        "first": true
+      }
+    }
+  ],
+  "sections": [
+    {
+      "h2": "What makes a deal \"hot\"?",
+      "html": "<p>We flag an offer as hot when it gives an unusually large saving for that brand, works sitewide or across a big range (such as all clearance), or stacks on top of sale prices. It is an editorial pick, not a claim about how many people used it.</p><p>A big percentage isn't always the best saving: a 20% code on full-price items can beat a 50% sale on things you don't need. Compare the final basket total.</p>"
+    }
+  ],
+  "related": [
+    "expiring-soon",
+    "voucher-codes",
+    "blog/how-to-find-voucher-codes-that-work"
+  ],
+  "keywords": [
+    "hot deals",
+    "best deals today",
+    "best promo codes",
+    "top voucher codes"
+  ],
+  "cardText": "Our pick of the strongest codes today.",
+  "updated": "2026-10-16"
+}
