@@ -11,7 +11,8 @@
    database or the local preview server (see assets/site.js).
    ===================================================================== */
 window.VV_DB = {
-  sheetsUrl: '', // e.g. 'https://script.google.com/macros/s/AKfy.../exec'
+  // "VoucherVault leads" sheet (youtube@shmor.ai), Apps Script "VoucherVault receiver", deployed 2026-10-16
+  sheetsUrl: 'https://script.google.com/macros/s/AKfycbw5fW4AN0g0czi2upmuHLT01YbP9VIc3KmJBrO46-wSlBoUEFaud45kINeujvw6j7_VuA/exec',
 };
 
 (function () {
