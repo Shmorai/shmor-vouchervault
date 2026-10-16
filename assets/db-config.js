@@ -1,39 +1,35 @@
 /* =====================================================================
-   VoucherVault: where code-unlock details and Code Alerts sign-ups are stored.
+   VoucherVault: where code-unlock details (name, email, mobile) and Code
+   Alerts sign-ups are stored.
 
-   Database: Supabase (hosted Postgres). Create the tables once with
-   tools/supabase-setup.sql, then paste the project's URL and its PUBLIC
-   "anon" key below. The anon key is safe in a web page: the tables' row-level
-   security only lets visitors ADD rows, never read, change or delete them.
-   Read and export the data in the Supabase dashboard (Table Editor → leads / signups).
-   Never put the "service_role" key here.
+   Storage: a Google Sheet you own, via a small Apps Script web app
+   (tools/google-sheets/Code.gs, steps in tools/google-sheets/SETUP.md).
+   Paste the web app link ("…/macros/s/…/exec") below. The link can only ADD
+   rows; it never shows the sheet's contents.
 
-   While url/anonKey are empty, forms fall back to the private preview's
+   While sheetsUrl is empty, forms fall back to the private preview's
    database or the local preview server (see assets/site.js).
    ===================================================================== */
 window.VV_DB = {
-  url: '',      // e.g. 'https://abcdefghijklmnop.supabase.co'
-  anonKey: '',  // Project Settings → API → Project API keys → anon / public
+  sheetsUrl: '', // e.g. 'https://script.google.com/macros/s/AKfy.../exec'
 };
 
 (function () {
   'use strict';
-  var cfg = window.VV_DB || {};
-  if (!cfg.url || !cfg.anonKey) return; // not connected yet: site.js uses its fallbacks
-  // camelCase fields from the forms → snake_case columns in tools/supabase-setup.sql
-  var COLS = {
-    leads: { firstName: 'first_name', lastName: 'last_name', email: 'email', phone: 'phone', termsAccepted: 'terms_accepted',
-      marketingEmail: 'marketing_email', marketingSms: 'marketing_sms', store: 'store', offer: 'offer', page: 'page' },
-    signups: { email: 'email', list: 'list', interests: 'interests', store: 'store', placement: 'placement', page: 'page', consent: 'consent' },
-  };
+  var url = (window.VV_DB || {}).sheetsUrl;
+  if (!url) return; // not connected yet: site.js uses its fallbacks
+  // table = "leads" (code unlocks) or "signups" (Code Alerts). Sent as text/plain so the
+  // browser makes a simple request (no CORS preflight, which Apps Script can't answer).
   window.vvSaveRow = function (table, row) {
-    var map = COLS[table], body = {};
-    if (!map) return Promise.reject(new Error('unknown table'));
-    Object.keys(map).forEach(function (k) { if (row[k] !== undefined && row[k] !== '') body[map[k]] = row[k]; });
-    return fetch(cfg.url.replace(/\/$/, '') + '/rest/v1/' + table, {
-      method: 'POST',
-      headers: { apikey: cfg.anonKey, Authorization: 'Bearer ' + cfg.anonKey, 'Content-Type': 'application/json', Prefer: 'return=minimal' },
-      body: JSON.stringify(body),
-    }).then(function (r) { if (!r.ok) throw new Error('Database HTTP ' + r.status); });
+    var body = JSON.stringify(Object.assign({ sheet: table }, row));
+    return fetch(url, { method: 'POST', body: body, headers: { 'Content-Type': 'text/plain;charset=utf-8' }, redirect: 'follow' })
+      .then(function (r) { return r.json(); })
+      .then(function (res) { if (!res || !res.ok) throw new Error('Sheet refused the row'); })
+      .catch(function (err) {
+        // A refusal is a real failure. If only the reply couldn't be read (some privacy
+        // extensions block it), the row has normally landed already, so don't resend
+        // (that would duplicate it) and treat it as saved.
+        if (err && err.message === 'Sheet refused the row') throw err;
+      });
   };
 })();

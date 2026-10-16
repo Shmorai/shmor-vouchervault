@@ -206,7 +206,7 @@
     if (unlocked()) showCode(card, btn);
     else { modal.classList.add('is-gate'); $('.vv-err').hidden = true; getCodes(); setTimeout(function () { $('#vv-first').focus(); }, 30); }
   }
-  // Save the unlock details: database (assets/db-config.js) -> provider (gate form action) -> private preview db ("leads") -> local preview server
+  // Save the unlock details: Google Sheet (assets/db-config.js) -> provider (gate form action) -> private preview db ("leads") -> local preview server
   function saveLead(row) {
     var action = $('.vv-gate').getAttribute('action');
     var viaDatabase = function () { return window.vvSaveRow ? window.vvSaveRow('leads', row) : Promise.reject(new Error('no database')); };
