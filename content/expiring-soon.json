@@ -36,6 +36,10 @@
     {
       "h2": "Is an ending-soon deal worth rushing for?",
       "html": "<p>Only if you were going to buy anyway. Countdown timers are designed to hurry you, and many brands run similar offers again within weeks. Before you buy, check the price you'll actually pay against other stores and the item's usual price.</p><p>The end dates here are the ones the brand publishes. Times are often midnight UK time or the store's local time, so don't leave it to the last minute.</p>"
+    },
+    {
+      "h2": "How we handle end dates and stale offers",
+      "html": "<p>Every offer here shows when it was last checked on the brand’s own site. Offers with a published end date disappear automatically once it passes. For offers with no end date, we hide them when the last check gets too old: <strong>10 days</strong> for codes, <strong>14 days</strong> for deals and free gifts and <strong>45 days</strong> for member perks. Each is then re-checked and put back if it is still live.</p><p>Before you rely on a countdown, read the terms on the card. They show minimum spend, regions and who the offer is for. See <a href=\"/how-we-check/\">how we check</a> for the full process, and read <a href=\"/blog/black-friday-returns-refunds-rights/\">Black Friday returns and refunds</a> if you are buying at a deadline.</p>"
     }
   ],
   "related": [
@@ -50,5 +54,15 @@
     "codes ending today"
   ],
   "cardText": "Offers with an end date, soonest first.",
-  "updated": "2026-10-16"
+  "updated": "2026-11-18",
+  "faqs": [
+    {
+      "q": "Why did an offer disappear before its end date?",
+      "a": "The brand may have ended or changed it early, or the last check on the brand’s site got too old. Offers are re-checked and restored if they are still live."
+    },
+    {
+      "q": "What time zone do the end dates use?",
+      "a": "They follow the brand’s published end date. Many use midnight UK time or the store’s local time, so don’t leave it to the last minute."
+    }
+  ]
 }

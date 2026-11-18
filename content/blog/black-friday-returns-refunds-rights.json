@@ -1,0 +1,84 @@
+{
+  "slug": "blog/black-friday-returns-refunds-rights",
+  "type": "post",
+  "date": "2026-11-18",
+  "updated": "2026-11-18",
+  "eyebrow": "Black Friday",
+  "cardText": "Your 14-day cancellation right in the UK, how US returns work, and what to check before you buy.",
+  "title": "Black Friday Returns and Refund Rights | VoucherVault",
+  "description": "Black Friday returns and refund rights: the UK 14-day cancellation period, what is excluded, how US return policies and card disputes work, and what to save.",
+  "h1": "Black Friday returns and refunds: know your rights before you buy",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1607083206968-13611e3d76db",
+    "alt": "Sale lettering for a shopping event",
+    "credit": "Tamanna Rumee",
+    "creditUrl": "https://unsplash.com/@tamanna_rumee"
+  },
+  "intro": "A bargain is only a bargain if you can sort it out when something goes wrong. Before Black Friday on 27 November 2026 and Cyber Monday on 30 November, here is what the rules say about cancelling and returning, in the UK and the US, and what to keep.",
+  "sections": [
+    {
+      "h2": "UK: the 14-day cancellation right for online orders",
+      "html": "<p>GOV.UK says that for online, mail and phone orders you can cancel even if nothing is wrong with the item. The 14 days run from when you <strong>receive</strong> the item, and you do not have to give a reason. After you tell the seller you want to cancel, you have another 14 days to send the item back, and the seller must refund you within 14 days of getting it back.</p><ul><li>The seller cannot deduct fees from your refund unless the item has been used or damaged.</li><li>You must be refunded standard delivery if you paid for it. If you chose a faster, dearer option, only the standard cost is refunded.</li><li>You may handle the item as you would in a shop, for example trying it on or taking it out of the box.</li></ul>"
+    },
+    {
+      "h2": "UK: what the 14 days does not cover",
+      "html": "<p>GOV.UK lists items where you can only get a refund if they are faulty: personalised or custom-made goods, perishable items such as flowers or frozen food, newspapers and magazines, unwrapped CDs, DVDs and software, and sealed items that cannot be returned once opened for health or hygiene reasons, such as underwear.</p><p>The 14-day cancellation right applies to distance sales. For items bought in a shop, GOV.UK says a retailer generally does not have to refund you if you simply change your mind, although faulty goods can still be repaired, replaced or partly refunded. Many shops offer longer returns windows over the Christmas period as goodwill, but that is the shop’s own policy, so read the terms."
+    },
+    {
+      "h2": "US: policies matter more than a single national right",
+      "html": "<p>The FTC says a site must tell you whether you can return an item for a full refund. Check who pays return shipping, how many days you have and whether restocking fees apply. The FTC also notes that sale and clearance items may have different return and refund policies, which is exactly what you meet on Black Friday.</p><p>On shipping, the FTC says sellers must ship as promised in their ads. If no time is promised, they must ship within 30 days of getting your name, address and payment, or permission to charge you."
+    },
+    {
+      "h2": "If something goes wrong: card disputes",
+      "html": "<p>The FTC says you can dispute a charge if you are charged twice, billed for goods you never received, or sent a wrong or defective item. Contact your card company straight away and send a letter that reaches it within 60 days of the first bill showing the error.</p>"
+    },
+    {
+      "h2": "What to save before you click buy",
+      "html": "<ul><li>A screenshot of the product page showing the price, the offer and the returns policy.</li><li>The order confirmation email and the code you used. Our guide on <a href=\"/blog/why-voucher-codes-dont-work/\">why voucher codes don’t work</a> covers the terms that most often catch people out.</li><li>The delivery date, and the date you receive the item, which starts the UK 14 days.</li><li>The return label or proof of postage when you send something back.</li></ul><p>Compare the final price after any code against other stores, and see our <a href=\"/black-friday/\">Black Friday page</a>, <a href=\"/hot-deals/\">hot deals</a> and <a href=\"/expiring-soon/\">ending-soon offers</a> to check what is live. Codes and offers are checked against brands’ own sites, and returns terms can differ for discounted lines, so read each brand’s policy."
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How long do I have to return a Black Friday purchase in the UK?",
+      "a": "For online, phone or mail orders, GOV.UK says you can cancel within 14 days of receiving the item, then have another 14 days to send it back. Some retailers give longer, but that is their own policy."
+    },
+    {
+      "q": "Do I get delivery costs back if I return an item?",
+      "a": "GOV.UK says standard delivery must be refunded if you paid for it and cancel under the 14-day right. If you paid for a more expensive option, only the standard cost is refunded."
+    },
+    {
+      "q": "Can sale items be returned in the US?",
+      "a": "It depends on the retailer. The FTC says sale and clearance items may have different return and refund policies, so read the policy before you buy."
+    },
+    {
+      "q": "Can I get my money back through my card company?",
+      "a": "The FTC says you can dispute a charge for goods never received, a wrong or defective item or a double charge, and you should send a letter within 60 days of the first bill showing the error."
+    }
+  ],
+  "sources": [
+    {
+      "title": "GOV.UK: Accepting returns and giving refunds",
+      "url": "https://www.gov.uk/accepting-returns-and-giving-refunds"
+    },
+    {
+      "title": "FTC Consumer Advice: Online shopping",
+      "url": "https://consumer.ftc.gov/articles/online-shopping"
+    }
+  ],
+  "related": [
+    "black-friday",
+    "hot-deals",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "black friday returns",
+    "black friday refund rights",
+    "14 day cancellation right uk",
+    "can i return a black friday purchase",
+    "cyber monday returns policy",
+    "online shopping refund rights",
+    "return sale items",
+    "credit card dispute online purchase",
+    "black friday 2026"
+  ]
+}
