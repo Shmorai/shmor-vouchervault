@@ -77,7 +77,56 @@
     }
   ],
   "offers": [],
-  "links": {},
+  "links": {
+    "cj7287203-home": {
+      "merchant": "FragranceShop.com",
+      "network": "cj",
+      "url": "https://www.jdoqocy.com/click-101926868-16942179",
+      "blurb": "FragranceShop.com: discount designer perfume and cologne (US)."
+    },
+    "cj7287203-women": {
+      "merchant": "FragranceShop.com",
+      "network": "cj",
+      "url": "https://www.anrdoezrs.net/click-101926868-16942204",
+      "blurb": "Women’s perfume at FragranceShop.com."
+    },
+    "cj7287203-men": {
+      "merchant": "FragranceShop.com",
+      "network": "cj",
+      "url": "https://www.kqzyfj.com/click-101926868-16942203",
+      "blurb": "Men’s cologne at FragranceShop.com."
+    },
+    "cj5384937-home": {
+      "merchant": "eCosmetics",
+      "network": "cj",
+      "url": "https://www.tkqlhce.com/click-101926868-17386714",
+      "blurb": "eCosmetics: make-up, skincare, haircare and fragrance from professional brands (US)."
+    },
+    "cj5384937-b-728": {
+      "merchant": "eCosmetics",
+      "network": "cj",
+      "url": "https://www.tkqlhce.com/click-101926868-17386714",
+      "banner": {
+        "src": "/assets/img/partners/cj5384937-b-728.jpg",
+        "cjSrc": "https://www.awltovhc.com/image-101926868-17386714",
+        "width": 728,
+        "height": 90,
+        "alt": "eCosmetics"
+      }
+    },
+    "cj5384937-b-300": {
+      "merchant": "eCosmetics",
+      "network": "cj",
+      "url": "https://www.kqzyfj.com/click-101926868-17386689",
+      "banner": {
+        "src": "/assets/img/partners/cj5384937-b-300.jpg",
+        "cjSrc": "https://www.ftjcfx.com/image-101926868-17386689",
+        "width": 300,
+        "height": 250,
+        "alt": "eCosmetics"
+      }
+    }
+  },
   "seo": {
     "siteName": "VoucherVault",
     "description": "Live voucher codes, promo codes and coupons for the world's biggest brands, checked against the brands' own sites, with hot deals, expiring-soon offers and saving advice.",

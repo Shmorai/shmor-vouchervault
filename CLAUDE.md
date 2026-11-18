@@ -58,6 +58,11 @@ Recurring in-chat job (cron `17 8 * * 2,5`, set up 2026-10-16 in the "VoucherVau
 3. For a brand-level referral link (all deals for a store), add it to `links` and set the store's `"link": "<slug>"` in the data.
 4. `node tools/sync-stores.js && node tools/build.js`, then sync the master and commit both repos.
 
+## Affiliate partners (live, added 2026-11-18)
+- **FragranceShop.com** (CJ 7287203): 5%, 45-day cookie; programme codes only; we must expire deals ourselves. Codes for the **VoucherVault property (PID 101926868)**: `cj7287203-home` (the store's `link`), `cj7287203-women`, `cj7287203-men`. No codes in CJ. CJ banners skipped: they claim "up to 90% off retail" and a "30 day money back guarantee", which its site no longer shows (2026-11-18: up to 84% off, 30-day return policy).
+- **eCosmetics** (CJ 5384937): 8%, 30-day cookie; public codes allowed; no software/toolbars; don't imply a closer relationship. Codes for VoucherVault: `cj5384937-home` (the store's `link`), logo banners 728x90 + 300x250 (self-hosted). No current codes in CJ; TRY25, TRY20 and SAVE15 come from its own page https://www.ecosmetics.com/promotions/.
+- Both are US stores in the beauty category in `data/vouchers.json` (offers ec-try25, ec-try20, ec-save15, fs-freeship50, verified 2026-11-18; the refresh job re-checks them). Placed: store pages, beauty category (links + eCosmetics banner), how-to-find-voucher-codes post.
+
 ## Pages (38)
 Home (stats → ending-soon ticker → hot codes → popular stores → ending soon → latest codes → categories → advice posts → sale dates → how we check → FAQ) · voucher-codes · hot-deals · expiring-soon · stores (A–Z) + 18 store pages · categories (+ fashion, sportswear, tech, beauty) · student-discounts · key-worker-discounts · black-friday (27 Nov 2026 / Cyber Monday 30 Nov) · how-we-check (editorial standards) · blog "Saving advice" + 5 posts (why codes don't work, finding codes that work, student verification, Singles' Day, sign-up discounts).
 Top menu: All codes, Hot deals, Ending soon, Stores, Categories, Student, Black Friday, Saving advice. Region switch (All/US/UK/EU, remembered) in the header filters every offer list.

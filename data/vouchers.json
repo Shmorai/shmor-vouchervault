@@ -10,6 +10,12 @@
     "beauty": { "label": "Beauty", "page": "categories/beauty" }
   },
   "stores": {
+    "fragranceshop": { "name": "FragranceShop.com", "url": "https://www.fragranceshop.com/", "category": "beauty", "regions": ["us"], "color": "#B0186F", "mono": "FS", "link": "cj7287203-home",
+      "about": "FragranceShop.com is a US online store (trading since 1998, based in New Jersey) selling discounted designer perfume, cologne and gift sets. Discounts are shown as a percentage off on each product.",
+      "tips": ["Free U.S. shipping applies over the order value shown in its site banner.", "Its 30-day return policy is linked from every page; check it before buying opened-bottle items.", "Prices are shown in USD by default; other currencies can be picked in the header."] },
+    "ecosmetics": { "name": "eCosmetics", "url": "https://www.ecosmetics.com/", "category": "beauty", "regions": ["us"], "color": "#E8665E", "mono": "eC", "link": "cj5384937-home",
+      "about": "eCosmetics is a US online beauty retailer selling make-up, skincare, haircare and fragrance from professional and salon brands. It publishes its official promo codes on its own promotions page.",
+      "tips": ["Use only one promo code per order; compare which saves more.", "Its Rewards Program earns points on every order.", "Check the Sale and Special Offers pages for markdowns that don’t need a code."] },
     "nike": { "name": "Nike", "url": "https://www.nike.com/", "category": "sportswear", "regions": ["us"], "color": "#111111", "mono": "N",
       "about": "Nike sells trainers, sportswear and kit worldwide through Nike.com and the Nike App. Its best-known savings are member and verified-group discounts rather than public sitewide codes.",
       "tips": ["Nike's group discounts (students, military, first responders, educators) are verified one by one and issued as single-use codes.", "Join Nike Membership (free) for the birthday-month offer.", "Discount codes usually exclude SNKRS launches, Nike By You and gift cards."] },
@@ -66,6 +72,14 @@
       "tips": ["Spend-and-save offers usually exclude sale items and designer collaborations.", "H&M membership is free and adds member bonus rewards."] }
   },
   "offers": [
+    { "id": "ec-try25", "store": "ecosmetics", "kind": "code", "code": "TRY25", "value": "25%", "title": "Extra 25% off with code TRY25",
+      "terms": "Official eCosmetics code from its promotions page. Enter at checkout; check that page for any exclusions.", "regions": ["us"], "expires": null, "verified": "2026-11-18", "source": "https://www.ecosmetics.com/promotions/" },
+    { "id": "ec-try20", "store": "ecosmetics", "kind": "code", "code": "TRY20", "value": "20%", "title": "Extra 20% off with code TRY20",
+      "terms": "Official eCosmetics code from its promotions page. Enter at checkout; check that page for any exclusions.", "regions": ["us"], "expires": null, "verified": "2026-11-18", "source": "https://www.ecosmetics.com/promotions/" },
+    { "id": "ec-save15", "store": "ecosmetics", "kind": "code", "code": "SAVE15", "value": "15%", "title": "Extra 15% off with code SAVE15",
+      "terms": "Official eCosmetics code from its promotions page. Enter at checkout; check that page for any exclusions.", "regions": ["us"], "expires": null, "verified": "2026-11-18", "source": "https://www.ecosmetics.com/promotions/" },
+    { "id": "fs-freeship50", "store": "fragranceshop", "kind": "deal", "value": "Free", "valueLabel": "Free shipping", "title": "Free U.S. shipping on orders over $50",
+      "terms": "US orders over $50, as shown in FragranceShop.com’s site banner.", "regions": ["us"], "expires": null, "verified": "2026-11-18", "source": "https://www.fragranceshop.com/" },
     { "id": "asos-newhere", "store": "asos", "kind": "code", "code": "NEWHERE", "value": "15%", "title": "15% off + free next-day delivery on your first ASOS order",
       "terms": "New customers who opt in to ASOS marketing. Enter NEWHERE at checkout on the website (HEYAPP in the app). Up to £500/€690 pre-discount spend. Not on gift vouchers, delivery, Premier Delivery or ASOS Marketplace; selected products and countries excluded.", "regions": ["uk"], "expires": null, "verified": "2026-10-16", "hot": true, "first": true, "source": "https://www.asos.com/" },
     { "id": "asos-heyapp", "store": "asos", "kind": "code", "code": "HEYAPP", "value": "15%", "title": "15% off your first order in the ASOS app",
