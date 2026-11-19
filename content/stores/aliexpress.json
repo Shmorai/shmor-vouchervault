@@ -1,0 +1,79 @@
+{
+  "generated": true,
+  "slug": "stores/aliexpress",
+  "title": "AliExpress Promo Codes & Discount Codes | VoucherVault",
+  "description": "3 live AliExpress offers, checked on aliexpress.com on 19 Nov 2026: New US customers: $12 off orders of $80+ with the code. Terms, end dates and tips.",
+  "nav": "AliExpress",
+  "h1": "AliExpress promo codes & offers",
+  "eyebrow": "Tech & laptops · US, UK, EU",
+  "intro": "AliExpress is a global online marketplace (part of Alibaba Group) where independent sellers ship electronics, gadgets, home, fashion and hobby items worldwide. Its codes are usually for new customers and have a minimum spend.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+    "alt": "A laptop on a wooden table",
+    "credit": "Kari Shea",
+    "creditUrl": "https://unsplash.com/@karishea"
+  },
+  "search": false,
+  "ctaSearch": false,
+  "blocks": [
+    {
+      "type": "storeinfo",
+      "store": "aliexpress",
+      "position": "top"
+    },
+    {
+      "type": "offers",
+      "position": "top",
+      "preset": {
+        "store": "aliexpress"
+      },
+      "tabs": true,
+      "title": "AliExpress codes & offers",
+      "intro": "Every offer below comes from AliExpress's official affiliate programme. Tap Get code to unlock and copy it."
+    },
+    {
+      "type": "alerts",
+      "position": "top",
+      "store": "aliexpress"
+    }
+  ],
+  "sections": [
+    {
+      "h2": "How to use a AliExpress promo code",
+      "html": "<ol><li>Pick an offer above and tap <strong>Get code</strong>. The first time, enter your email and mobile to unlock codes, then copy it (deals and member perks need no code).</li><li>Open <a href=\"https://www.aliexpress.com/\" rel=\"nofollow noopener\" target=\"_blank\">aliexpress.com</a>, add the items you want to your cart and check they meet the offer's terms.</li><li>Paste the code into the promo or discount box at checkout and check the price drops before you pay.</li></ol>"
+    },
+    {
+      "h2": "Tips for saving at AliExpress",
+      "html": "<ul><li>New-user codes only work on a first order with a new account.</li><li>Check each seller’s delivery estimate, rating and return terms before you buy.</li><li>In the UK and EU, import VAT is normally charged at checkout on low-value orders.</li></ul>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Is there a AliExpress discount code right now?",
+      "a": "Yes. As of 19 Nov 2026 we found 3 codes on aliexpress.com: new US customers: $12 off orders of $80+ with the code; new US customers: $5 off orders of $20+ with the code; new US customers: $3 off orders of $10+ with the code. Tap <strong>Get code</strong> above to unlock them. Codes can end without notice, so the store's checkout has the final word."
+    },
+    {
+      "q": "How does VoucherVault check AliExpress codes?",
+      "a": "We only list offers we have seen on AliExpress's own site or app, or in its official affiliate feed, and show the date we last checked each one. Offers with a published end date disappear when it passes; offers without one are hidden if we haven't re-checked them recently."
+    },
+    {
+      "q": "Why isn't my AliExpress code working?",
+      "a": "The usual reasons are: the code only covers selected items, you haven't reached a minimum spend, it is for new customers or app orders only, it can't be combined with another offer, or it has just ended. Read the terms on the offer and check your basket meets them."
+    }
+  ],
+  "related": [
+    "categories/tech",
+    "voucher-codes",
+    "blog/why-voucher-codes-dont-work"
+  ],
+  "keywords": [
+    "aliexpress discount code",
+    "aliexpress promo code",
+    "aliexpress voucher code",
+    "aliexpress coupon",
+    "aliexpress student discount",
+    "aliexpress offers"
+  ],
+  "cardText": "$12 off: New US customers: $12 off orders of $80+ with the code",
+  "updated": "2026-11-19"
+}

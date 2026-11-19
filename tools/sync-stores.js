@@ -75,7 +75,9 @@ for (const [id, s] of Object.entries(DATA.stores)) {
     ctaSearch: false,
     blocks: [
       { type: 'storeinfo', store: id, position: 'top' },
-      { type: 'offers', position: 'top', preset: { store: id }, tabs: true, title: `${s.name} codes & offers`, intro: `Every offer below was checked on ${site}. Tap Get code to unlock and copy it.` },
+      { type: 'offers', position: 'top', preset: { store: id }, tabs: true, title: `${s.name} codes & offers`, intro: (DATA.offers.filter(o => o.store === id).every(o => o.via) && DATA.offers.some(o => o.store === id)
+        ? `Every offer below comes from ${s.name}'s official affiliate programme. Tap Get code to unlock and copy it.`
+        : `Every offer below was checked on ${site}. Tap Get code to unlock and copy it.`) },
       { type: 'alerts', position: 'top', store: id },
     ],
     sections: [

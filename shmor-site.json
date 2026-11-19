@@ -125,6 +125,36 @@
         "height": 250,
         "alt": "eCosmetics"
       }
+    },
+    "cj7711902-home-vv": {
+      "merchant": "AliExpress",
+      "network": "cj",
+      "url": "https://www.kqzyfj.com/click-101926868-17242061",
+      "blurb": "AliExpress: global marketplace of independent sellers."
+    },
+    "cj7711902-new3": {
+      "merchant": "AliExpress",
+      "network": "cj",
+      "url": "https://www.tkqlhce.com/click-101926868-17385377",
+      "expires": "2026-12-31",
+      "then": "cj7711902-home-vv",
+      "blurb": "AliExpress new US users: $3 off $10 with code 0003NEWUSOFF."
+    },
+    "cj7711902-new5": {
+      "merchant": "AliExpress",
+      "network": "cj",
+      "url": "https://www.anrdoezrs.net/click-101926868-17385378",
+      "expires": "2026-12-31",
+      "then": "cj7711902-home-vv",
+      "blurb": "AliExpress new US users: $5 off $20 with code 5NEWUSOFF."
+    },
+    "cj7711902-new12": {
+      "merchant": "AliExpress",
+      "network": "cj",
+      "url": "https://www.dpbolvw.net/click-101926868-17385379",
+      "expires": "2026-12-31",
+      "then": "cj7711902-home-vv",
+      "blurb": "AliExpress new US users: $12 off $80 with code 12NEWUSOFF."
     }
   },
   "seo": {

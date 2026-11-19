@@ -10,6 +10,9 @@
     "beauty": { "label": "Beauty", "page": "categories/beauty" }
   },
   "stores": {
+    "aliexpress": { "name": "AliExpress", "url": "https://www.aliexpress.com/", "category": "tech", "regions": ["us", "uk", "eu"], "color": "#E62E04", "mono": "AE", "link": "cj7711902-home-vv",
+      "about": "AliExpress is a global online marketplace (part of Alibaba Group) where independent sellers ship electronics, gadgets, home, fashion and hobby items worldwide. Its codes are usually for new customers and have a minimum spend.",
+      "tips": ["New-user codes only work on a first order with a new account.", "Check each seller’s delivery estimate, rating and return terms before you buy.", "In the UK and EU, import VAT is normally charged at checkout on low-value orders."] },
     "fragranceshop": { "name": "FragranceShop.com", "url": "https://www.fragranceshop.com/", "category": "beauty", "regions": ["us"], "color": "#B0186F", "mono": "FS", "link": "cj7287203-home",
       "about": "FragranceShop.com is a US online store (trading since 1998, based in New Jersey) selling discounted designer perfume, cologne and gift sets. Discounts are shown as a percentage off on each product.",
       "tips": ["Free U.S. shipping applies over the order value shown in its site banner.", "Its 30-day return policy is linked from every page; check it before buying opened-bottle items.", "Prices are shown in USD by default; other currencies can be picked in the header."] },
@@ -72,6 +75,12 @@
       "tips": ["Spend-and-save offers usually exclude sale items and designer collaborations.", "H&M membership is free and adds member bonus rewards."] }
   },
   "offers": [
+    { "id": "ae-new12", "store": "aliexpress", "kind": "code", "via": "CJ affiliate programme", "code": "12NEWUSOFF", "value": "$12", "title": "New US customers: $12 off orders of $80+ with code 12NEWUSOFF", "link": "cj7711902-new12",
+      "terms": "AliExpress affiliate programme code for new US users; minimum spend $80. Listed by AliExpress until 31 Dec 2026.", "regions": ["us"], "expires": "2026-12-31", "verified": "2026-11-19", "source": "https://www.aliexpress.com/" },
+    { "id": "ae-new5", "store": "aliexpress", "kind": "code", "via": "CJ affiliate programme", "code": "5NEWUSOFF", "value": "$5", "title": "New US customers: $5 off orders of $20+ with code 5NEWUSOFF", "link": "cj7711902-new5",
+      "terms": "AliExpress affiliate programme code for new US users; minimum spend $20. Listed by AliExpress until 31 Dec 2026.", "regions": ["us"], "expires": "2026-12-31", "verified": "2026-11-19", "source": "https://www.aliexpress.com/" },
+    { "id": "ae-new3", "store": "aliexpress", "kind": "code", "via": "CJ affiliate programme", "code": "0003NEWUSOFF", "value": "$3", "title": "New US customers: $3 off orders of $10+ with code 0003NEWUSOFF", "link": "cj7711902-new3",
+      "terms": "AliExpress affiliate programme code for new US users; minimum spend $10. Listed by AliExpress until 31 Dec 2026.", "regions": ["us"], "expires": "2026-12-31", "verified": "2026-11-19", "source": "https://www.aliexpress.com/" },
     { "id": "ec-try25", "store": "ecosmetics", "kind": "code", "code": "TRY25", "value": "25%", "title": "Extra 25% off with code TRY25",
       "terms": "Official eCosmetics code from its promotions page. Enter at checkout; check that page for any exclusions.", "regions": ["us"], "expires": null, "verified": "2026-11-18", "source": "https://www.ecosmetics.com/promotions/" },
     { "id": "ec-try20", "store": "ecosmetics", "kind": "code", "code": "TRY20", "value": "20%", "title": "Extra 20% off with code TRY20",
