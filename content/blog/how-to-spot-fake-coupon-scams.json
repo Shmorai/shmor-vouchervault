@@ -1,0 +1,95 @@
+{
+  "updated": "2026-11-20",
+  "type": "post",
+  "slug": "blog/how-to-spot-fake-coupon-scams",
+  "date": "2026-11-20",
+  "eyebrow": "Stay safe",
+  "title": "Fake Coupon Scams: How to Spot Them | VoucherVault",
+  "description": "How to spot fake coupon and discount code scams: warning signs in ads and texts, payment red flags, how to check a code and what to do if you were caught.",
+  "h1": "Fake coupons and discount scams: how to spot them before you pay",
+  "intro": "Sale season is also scam season. Fake coupon texts, copycat shop ads and “80% off” websites all work by tempting you with a price that is too good. Here are the warning signs the FTC and UK Action Fraud highlight, and a safe way to check a code before you use it.",
+  "cardText": "Warning signs in ads and texts, payment red flags and a safe way to check any code.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
+    "alt": "Someone shopping online on a laptop with a bank card in hand",
+    "credit": "rupixen",
+    "creditUrl": "https://unsplash.com/@rupixen"
+  },
+  "keywords": [
+    "fake coupon scams",
+    "fake discount code scam",
+    "how to spot fake voucher codes",
+    "online shopping scams black friday",
+    "fake sale website",
+    "coupon text message scam",
+    "are discount codes safe",
+    "fake shop ads social media",
+    "scam voucher codes uk"
+  ],
+  "sections": [
+    {
+      "h2": "Common fake coupon and discount scams",
+      "html": "<p>The FTC warns that scammers copy real companies in social media ads, advertising big discounts on well-known brands. A click can lead to a fake website designed to take your money or information. It has also described bogus sites claiming 80–90% off during a store closing sale, when the real sale was only in physical shops. Other tricks include unexpected texts or calls offering “free coupons”, prizes or gift cards to get personal or financial details.</p>"
+    },
+    {
+      "h2": "Warning signs to watch for",
+      "html": "<ul><li><strong>Prices far below everywhere else.</strong> The FTC says very low prices on name brands in an ad are probably a scam.</li><li><strong>An unexpected message with a link.</strong> If a text asks for personal or financial details to claim a coupon, do not click; contact the company through a number or website you already know.</li><li><strong>Payment pressure.</strong> The FTC says only scammers insist you pay by gift card, wire transfer, payment app or cryptocurrency.</li><li><strong>Too good to be true.</strong> Action Fraud’s advice is that a deal that seems too good probably is, and to stop and think before handing over money or information.</li></ul>"
+    },
+    {
+      "h2": "How to check a code safely",
+      "html": "<ol><li><strong>Go to the brand directly.</strong> The FTC says the safest way to shop online is usually to go straight to the company’s website, rather than a search result or ad for an unfamiliar shop.</li><li><strong>Look up who the seller really is.</strong> The FTC suggests searching the seller’s name with words like “scam”, “complaint” or “review”.</li><li><strong>Check the code on the brand’s own pages</strong> such as its offers page, email sign-up or app. That is how we check codes: see <a href=\"/how-we-check/\">how we check</a>.</li><li><strong>Compare the end price.</strong> A code that only works on a fake site is not a deal.</li></ol><p>Browse our <a href=\"/voucher-codes/\">checked voucher codes</a>, and see <a href=\"/blog/how-to-find-voucher-codes-that-work/\">how to find codes that work</a> and <a href=\"/blog/why-voucher-codes-dont-work/\">why codes fail</a>.</p>"
+    },
+    {
+      "h2": "Why real codes still sometimes fail",
+      "html": "<p>Not every code that stops working is a scam. Real codes expire, are limited to new customers, need a minimum spend or exclude sale items. That is a different problem from a fake site: the brand’s own checkout will simply say the code is not valid. If a code is rejected on the genuine site, check its terms on the brand’s page rather than looking for a replacement on an unfamiliar website. We also hide codes automatically once their end date passes or when we have not seen them live recently, so the lists on <a href=\"/hot-deals/\">hot deals</a> and <a href=\"/expiring-soon/\">expiring soon</a> stay current.</p>"
+    },
+    {
+      "h2": "Pay in a way that protects you",
+      "html": "<p>The FTC says paying by credit card gives you protections other payment methods may not: you have the right to dispute charges, for example for goods that never arrive. Our <a href=\"/blog/black-friday-returns-refunds-rights/\">Black Friday refund rights post</a> explains disputes and returns in the UK and US.</p>"
+    },
+    {
+      "h2": "If you think you have been scammed",
+      "html": "<p>Contact your bank or card provider straight away. In the US, report it at ReportFraud.ftc.gov; in the UK, report to Action Fraud. Change any passwords you entered on the site. Keep screenshots of the ad, the website address and your order confirmation.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "How can I tell if a discount code is fake?",
+      "a": "Be wary of codes in unexpected texts, social ads for unknown shops or prices far below normal. Check the code on the brand’s own website, offers page or app instead."
+    },
+    {
+      "q": "Which payment methods are a red flag?",
+      "a": "The FTC says only scammers insist on payment by gift card, wire transfer, payment app or cryptocurrency."
+    },
+    {
+      "q": "Is it safer to pay by credit card online?",
+      "a": "The FTC says credit cards give protections such as the right to dispute charges, which other payment methods may not."
+    },
+    {
+      "q": "Where do I report a coupon scam?",
+      "a": "In the US use ReportFraud.ftc.gov. In the UK report it to Action Fraud and tell your bank or card provider immediately."
+    }
+  ],
+  "sources": [
+    {
+      "title": "FTC: That social media ad with super low prices on well-known brands could be a scam",
+      "url": "https://consumer.ftc.gov/consumer-alerts/2025/08/social-media-ad-super-low-prices-well-known-brands-could-be-scam"
+    },
+    {
+      "title": "FTC Consumer Advice: Scams",
+      "url": "https://consumer.ftc.gov/scams"
+    },
+    {
+      "title": "FTC: How to recognize and report spam text messages",
+      "url": "https://consumer.ftc.gov/articles/how-recognize-and-report-spam-text-messages"
+    },
+    {
+      "title": "Action Fraud: Online shopping fraud",
+      "url": "https://actionfraud.police.uk/a-z-of-fraud/online-shopping-fraud"
+    }
+  ],
+  "related": [
+    "voucher-codes",
+    "black-friday"
+  ]
+}
