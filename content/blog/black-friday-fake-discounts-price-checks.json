@@ -1,0 +1,83 @@
+{
+  "updated": "2026-11-23",
+  "type": "post",
+  "slug": "blog/black-friday-fake-discounts-price-checks",
+  "date": "2026-11-23",
+  "eyebrow": "Shop smarter",
+  "title": "Black Friday Fake Discounts: How to Check a Price",
+  "description": "Black Friday fake discounts: how to check a 'was' price, spot drip pricing and countdown timers, and what UK rules and the CMA say about misleading sales.",
+  "h1": "Black Friday fake discounts: how to check a price before you buy",
+  "intro": "Black Friday is on 27 November 2026, and a big red “70% off” tag does not prove a deal. UK law bans some of the most common pricing tricks, and the competition regulator has started investigating retailers. Here is how to check a sale price yourself, what the rules say and where a voucher code fits in.",
+  "cardText": "How to check a “was” price, spot drip pricing and fake countdown timers, and what UK rules say.",
+  "image": {
+    "src": "https://images.unsplash.com/photo-1607082349566-187342175e2f",
+    "alt": "Sale sign with a shopping trolley",
+    "credit": "Tamanna Rumee",
+    "creditUrl": "https://unsplash.com/@tamanna_rumee"
+  },
+  "keywords": [
+    "black friday fake discounts",
+    "black friday price check",
+    "are black friday deals real",
+    "fake sale prices uk",
+    "drip pricing",
+    "fake countdown timer sale",
+    "black friday 2026 deals tips",
+    "misleading discounts cma",
+    "how to check price history"
+  ],
+  "sections": [
+    {
+      "h2": "Are Black Friday discounts real?",
+      "html": "<p>Many are, but the headline percentage is only as honest as the “was” price it is measured against. The CMA, the UK’s competition and consumer regulator, says consumers need accurate pricing information to know they are getting a fair deal, and in November 2025 it opened its first investigations under the new consumer law, including into whether time-limited sales ended when retailers said they would (CMA, November 2025). It had reviewed more than 400 businesses and wrote to 100 of them about extra fees and online sales tactics. Those are not conclusions of wrongdoing: the CMA said it had reached none at that stage.</p>"
+    },
+    {
+      "h2": "Tricks the law now targets: drip pricing and fake countdowns",
+      "html": "<ul><li><strong>Drip pricing:</strong> a low headline price with mandatory fees added late in checkout. The CMA says drip pricing is banned under the Digital Markets, Competition and Consumers Act 2024, and that failing to include mandatory charges upfront has long been unlawful too.</li><li><strong>Misleading countdown timers:</strong> the CMA lists these as banned under the new regime. A timer that resets, or a “ends tonight” sale that carries on, is a red flag.</li><li><strong>Pre-ticked extras:</strong> automatically opting you in to optional charges is one of the practices the CMA is investigating.</li></ul><p>If it can find an infringement, the CMA can order compensation and fine companies up to 10% of global turnover.</p>"
+    },
+    {
+      "h2": "How to check a Black Friday price in five steps",
+      "html": "<ol><li><strong>Look at the price before the sale.</strong> Use a price-history tool or your own screenshots from October. A “was” price the item rarely or never sold at is not a real saving.</li><li><strong>Compare the final total.</strong> Add delivery, fees and extras at the last checkout step, not the product page.</li><li><strong>Check the same item elsewhere.</strong> Use the exact model number, not just the product name.</li><li><strong>Read the terms.</strong> Look for minimum spend, excluded items and dates.</li><li><strong>Wait out the timer.</strong> If a “today only” price is still there tomorrow, you lost nothing by waiting.</li></ol>"
+    },
+    {
+      "h2": "Where discount codes fit in",
+      "html": "<p>A code only helps when it is applied to a fair starting price. Always compare the price <em>after</em> the code with what you would have paid at a normal time. Use codes straight from the brand’s own site or app, and see <a href=\"/blog/how-to-find-voucher-codes-that-work/\">how to find voucher codes that actually work</a> and <a href=\"/blog/how-to-spot-fake-coupon-scams/\">how to spot fake coupon scams</a>. Our <a href=\"/black-friday/\">Black Friday page</a> lists dated offers we have checked, and our <a href=\"/blog/black-friday-returns-refunds-rights/\">returns and refund rights guide</a> covers what to do if an item is not as described.</p>"
+    },
+    {
+      "h2": "If you think a retailer is misleading shoppers",
+      "html": "<p>Keep screenshots of the price, the timer and your order confirmation, and check the CMA’s published enforcement work on GOV.UK. If you paid by card and something went wrong, ask your card provider whether it can help.</p>"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "What is drip pricing?",
+      "a": "Showing a low price first and adding compulsory fees later in checkout. The CMA says it is banned under the Digital Markets, Competition and Consumers Act 2024."
+    },
+    {
+      "q": "Are countdown timers on sales allowed?",
+      "a": "Misleading countdown timers are banned under the UK’s new regime, according to the CMA. A genuine timer must reflect when the offer really ends."
+    },
+    {
+      "q": "How can I tell if a Black Friday deal is genuine?",
+      "a": "Check the price history, compare the full total including fees and delivery, and look at the same exact model elsewhere."
+    },
+    {
+      "q": "When is Black Friday 2026?",
+      "a": "Black Friday falls on 27 November 2026, with Cyber Monday on 30 November."
+    }
+  ],
+  "sources": [
+    {
+      "title": "CMA: major consumer protection drive focused on online pricing practices (18 Nov 2025)",
+      "url": "https://www.gov.uk/government/news/cma-launches-major-consumer-protection-drive-focused-on-online-pricing-practices"
+    },
+    {
+      "title": "CMA: Unfair commercial practices guidance (CMA207)",
+      "url": "https://www.gov.uk/government/publications/unfair-commercial-practices-cma207"
+    }
+  ],
+  "related": [
+    "black-friday",
+    "voucher-codes"
+  ]
+}
